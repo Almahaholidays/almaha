@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.keralatourism.org)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(npm install)",
+      "Bash(npm run dev:*)",
+      "WebFetch(domain:www.thjnk.de)",
+      "WebFetch(domain:www.kryil.com)",
+      "mcp__ide__getDiagnostics",
+      "Bash(npm run build:*)"
+    ]
+  }
+}
