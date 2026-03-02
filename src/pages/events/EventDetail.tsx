@@ -50,7 +50,7 @@ const eventData: Record<string, EventData> = {
       'Custom branding and production services'
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80',
+      '/mice/mice2.jpeg',
       'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80',
       'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80',
       'https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&q=80',
@@ -92,10 +92,10 @@ const eventData: Record<string, EventData> = {
       '24/7 concierge support'
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80',
-      'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80',
-      'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80',
-      'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?w=800&q=80',
+      '/fit/Solo.jpg',
+      '/fit/SoloCamelRide.jpg',
+      '/fit/SoloCampfire.jpg',
+      '/fit/SoloCooking.jpg',
     ],
     testimonials: [
       { name: 'Emma Williams', role: 'Travel Blogger', content: 'The flexibility was amazing! Changed my plans multiple times and they adapted seamlessly. Discovered places I never would have found alone.', avatar: 'https://i.pravatar.cc/150?img=5' },
@@ -134,10 +134,10 @@ const eventData: Record<string, EventData> = {
       'Expert local guides'
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80',
-      'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&q=80',
-      'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=800&q=80',
-      'https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800&q=80',
+      '/group/GroupCamel.jpg',
+      '/group/GroupCampfire.jpg',
+      '/group/GroupCar.jpg',
+      '/group/GroupLunch.jpg',
     ],
     testimonials: [
       { name: 'Lisa Chen', role: 'Teacher, Solo Traveler', content: 'As a solo traveler, I felt welcomed and safe. Made amazing friends and the itinerary was perfect!', avatar: 'https://i.pravatar.cc/150?img=9' },
