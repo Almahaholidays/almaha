@@ -389,7 +389,7 @@ const Opener: React.FC = () => (
   <section className="relative min-h-screen flex flex-col lg:flex-row overflow-hidden">
 
     {/* ── LEFT: dark panel ── */}
-    <div className="relative flex-1 bg-primary-dark flex flex-col justify-center pt-32 pb-16 px-10 md:px-16 lg:px-20 overflow-hidden">
+    <div className="relative flex-1 bg-primary-dark flex flex-col justify-center pt-32 pb-16 px-10 md:px-16 lg:px-20 overflow-hidden overflow-x-clip">
 
       {/* Decorative ghost text */}
       <span className="absolute -bottom-6 -left-4 font-display text-[12rem] font-black text-white/[0.025] select-none leading-none pointer-events-none">
@@ -538,18 +538,55 @@ const ContactForm: React.FC = () => {
   const [dateRange, setDateRange]   = useState<DateRange>({ start: null, end: null });
   const [submitted, setSubmitted]   = useState(false);
 
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+
   const toggle = (t: string) =>
     setSelected((prev) => (prev.includes(t) ? prev.filter((x) => x !== t) : [...prev, t]));
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Format the email body with all form details
+    const emailBody = `
+Contact Form Submission
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+👤 CONTACT DETAILS
+Name: ${name}
+Email: ${email}
+Phone: ${phone || 'Not provided'}
+
+👥 TRAVEL DETAILS
+Number of Travellers: ${travellers || 'Not specified'}
+${dateRange.start ? `Travel Dates: ${fmtDate(dateRange.start)}${dateRange.end ? ` → ${fmtDate(dateRange.end)}` : ' (return date not selected)'}` : 'Travel Dates: Not selected'}
+
+🎯 INTERESTS
+${selected.length > 0 ? selected.join(', ') : 'None selected'}
+
+💬 MESSAGE
+${message}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+This enquiry was submitted via the Al Maha Tourism contact form.
+    `.trim();
+
+    // Create mailto link
+    const mailtoLink = `mailto:${EMAIL}?subject=${encodeURIComponent('New Contact Form Submission - ' + name)}&body=${encodeURIComponent(emailBody)}`;
+
+    // Open email client
+    window.location.href = mailtoLink;
+
+    // Show success message
     setSubmitted(true);
   };
 
   return (
     <div
       ref={ref as React.RefObject<HTMLDivElement>}
-      className={`flex-1 bg-white px-8 md:px-14 lg:px-16 py-20 transition-all duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+      className={`flex-1 bg-white px-8 md:px-14 lg:px-16 py-20 transition-all duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] overflow-x-hidden ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
     >
       {/* Form header */}
       <div className="flex items-center gap-5 mb-10">
@@ -581,7 +618,16 @@ const ContactForm: React.FC = () => {
             </p>
           </div>
           <button
-            onClick={() => setSubmitted(false)}
+            onClick={() => {
+              setSubmitted(false);
+              setName('');
+              setEmail('');
+              setPhone('');
+              setMessage('');
+              setTravellers('');
+              setSelected([]);
+              setDateRange({ start: null, end: null });
+            }}
             className="text-[11px] font-bold tracking-widest uppercase text-neutral-400 hover:text-[#e3261d] transition-colors duration-300"
           >
             Send another message →
@@ -593,17 +639,37 @@ const ContactForm: React.FC = () => {
           {/* Name + Email row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-9">
             <Field label="Full Name">
-              <input type="text" className={inputCls} placeholder="Your full name" required />
+              <input
+                type="text"
+                className={inputCls}
+                placeholder="Your full name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
             </Field>
             <Field label="Email Address">
-              <input type="email" className={inputCls} placeholder="your@email.com" required />
+              <input
+                type="email"
+                className={inputCls}
+                placeholder="your@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
             </Field>
           </div>
 
           {/* Phone + Travellers row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-9">
             <Field label="Phone Number">
-              <input type="tel" className={inputCls} placeholder="+968 …" />
+              <input
+                type="tel"
+                className={inputCls}
+                placeholder="+968 …"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
             </Field>
             <Field label="Number of Travellers">
               <TravellersSelect value={travellers} onChange={setTravellers} />
@@ -649,6 +715,8 @@ const ContactForm: React.FC = () => {
               rows={4}
               className={`${inputCls} resize-none`}
               placeholder="Any special requirements, dream experiences, or questions for our team…"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               required
             />
           </Field>
@@ -821,11 +889,11 @@ const TrustBar: React.FC = () => {
    Page root
 ───────────────────────────────────────────── */
 const Contact: React.FC = () => (
-  <div>
+  <div className="overflow-x-hidden">
     <Opener />
 
     {/* Form + Sidebar — side by side */}
-    <div className="flex flex-col lg:flex-row min-h-screen">
+    <div className="flex flex-col lg:flex-row">
       <ContactForm />
       <ContactSidebar />
     </div>
