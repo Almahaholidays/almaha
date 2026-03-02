@@ -144,7 +144,6 @@ const TravellersSelect: React.FC<{ value: string; onChange: (v: string) => void 
               </div>
               <div className="flex-1 min-w-0">
                 <p className={`text-sm font-bold leading-tight transition-colors duration-200 ${isSelected ? 'text-[#e3261d]' : 'text-primary-dark'}`}>{opt.desc}</p>
-                <p className="text-xs text-neutral-400 mt-0.5">{opt.desc}</p>
               </div>
               {isSelected && (
                 <svg className="w-4 h-4 text-[#e3261d] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
