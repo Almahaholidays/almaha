@@ -42,7 +42,7 @@ const AboutSection: React.FC = () => {
             <div className="grid grid-cols-3 gap-6 mb-10">
               {[
                 { value: '25+', label: 'Years Experience', color: '#4e3779' },
-                { value: '500+', label: 'Happy Clients', color: '#e3261d' },
+                { value: '100+', label: 'Packages', color: '#e3261d' },
                 { value: '50+', label: 'Destinations', color: '#4e3779' }
               ].map((stat) => (
                 <div key={stat.label}>
