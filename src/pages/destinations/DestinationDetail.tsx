@@ -371,12 +371,12 @@ const HeroSection: React.FC<{ dest: DestinationData }> = ({ dest }) => (
               Plan Your Visit
               <Arrow className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-300" />
             </Link>
-            <a
-              href="#experiences"
+            <Link
+              to="/services"
               className="inline-flex items-center gap-3 border border-white/30 bg-white/8 backdrop-blur-sm text-white text-sm font-semibold px-8 py-4 rounded-full hover:bg-white/15 hover:border-white/50 transition-all duration-300 w-fit"
             >
               Explore Experiences
-            </a>
+            </Link>
           </div>
         </div>
       </div>

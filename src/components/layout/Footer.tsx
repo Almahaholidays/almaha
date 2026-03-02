@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
               Discover the extraordinary beauty and rich heritage of Oman with expertly crafted tours and unforgettable experiences.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center transition-colors duration-300"
+              <a href="https://www.linkedin.com/company/al-maha-rent-a-car/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center transition-colors duration-300"
                 style={{ transition: 'background-color 0.3s' }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(227, 38, 29, 1)'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = ''}>
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
               <li><Link to="/" className="text-neutral-300 hover:text-[#e3261d] transition-colors duration-250">Home</Link></li>
               <li><Link to="/about" className="text-neutral-300 hover:text-[#e3261d] transition-colors duration-250">About Us</Link></li>
               <li><Link to="/destinations" className="text-neutral-300 hover:text-[#e3261d] transition-colors duration-250">Destinations</Link></li>
-              <li><Link to="/experiences" className="text-neutral-300 hover:text-[#e3261d] transition-colors duration-250">Experiences</Link></li>
+              <li><Link to="/services" className="text-neutral-300 hover:text-[#e3261d] transition-colors duration-250">Experiences</Link></li>
               <li><Link to="/contact" className="text-neutral-300 hover:text-[#e3261d] transition-colors duration-250">Contact</Link></li>
             </ul>
           </div>
@@ -67,11 +67,11 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-display text-lg font-bold mb-6">Popular Destinations</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-neutral-300 hover:text-[#e3261d] transition-colors duration-250">Muscat</a></li>
-              <li><a href="#" className="text-neutral-300 hover:text-[#e3261d] transition-colors duration-250">Wahiba Sands</a></li>
-              <li><a href="#" className="text-neutral-300 hover:text-[#e3261d] transition-colors duration-250">Nizwa</a></li>
-              <li><a href="#" className="text-neutral-300 hover:text-[#e3261d] transition-colors duration-250">Salalah</a></li>
-              <li><a href="#" className="text-neutral-300 hover:text-[#e3261d] transition-colors duration-250">Jebel Akhdar</a></li>
+              <li><Link to="/destinations/muscat" className="text-neutral-300 hover:text-[#e3261d] transition-colors duration-250">Muscat</Link></li>
+              <li><Link to="/destinations/wahiba-sands" className="text-neutral-300 hover:text-[#e3261d] transition-colors duration-250">Wahiba Sands</Link></li>
+              <li><Link to="/destinations/nizwa" className="text-neutral-300 hover:text-[#e3261d] transition-colors duration-250">Nizwa</Link></li>
+              <li><Link to="/destinations/salalah" className="text-neutral-300 hover:text-[#e3261d] transition-colors duration-250">Salalah</Link></li>
+              <li><Link to="/destinations/jebel-akhdar" className="text-neutral-300 hover:text-[#e3261d] transition-colors duration-250">Jebel Akhdar</Link></li>
             </ul>
           </div>
 
