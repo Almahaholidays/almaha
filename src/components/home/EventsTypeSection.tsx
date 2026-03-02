@@ -13,19 +13,19 @@ const events: EventItem[] = [
   {
     title: 'MICE',
     fullName: 'Meetings & Conferences',
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&q=80',
+    image: '/mice/mice2.jpeg',
     slug: 'mice',
   },
   {
     title: 'FIT',
     fullName: 'Independent Travel',
-    image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&q=80',
+    image: '/fit/SoloCamelRide.jpg',
     slug: 'fit',
   },
   {
     title: 'GROUP',
     fullName: 'Group Adventures',
-    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80',
+    image: '/group/GroupCampfire.jpg',
     slug: 'group',
   },
   {

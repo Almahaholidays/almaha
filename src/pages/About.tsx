@@ -553,11 +553,6 @@ const WhyChooseUs: React.FC = () => {
    6 · MEET THE TEAM
    Single cinematic group photo with caption strip
 ───────────────────────────────────────────── */
-const team = [
-  { name: 'Ahmed Al-Balushi',  role: 'Founder & CEO',            specialty: 'Desert & Luxury Expeditions' },
-  { name: 'Fatima Al-Rashidi', role: 'Head of Operations',        specialty: 'Guest Experience & Logistics' },
-  { name: 'Khalid Al-Habsi',   role: 'Chief Experience Officer',  specialty: 'Adventure & Cultural Design' },
-];
 
 const MeetTheTeam: React.FC = () => {
   const [ref, entry] = useIntersectionObserver({ threshold: 0.05, freezeOnceVisible: true });
@@ -596,7 +591,7 @@ const MeetTheTeam: React.FC = () => {
           {/* Photo wrapper */}
           <div className="relative overflow-hidden rounded-3xl aspect-[16/7] group">
             <img
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80"
+              src="/TeamPic.jpeg"
               alt="The Al Maha Tourism team"
               className="w-full h-full object-cover object-center transition-transform duration-[1400ms] ease-out group-hover:scale-[1.04]"
             />
@@ -613,7 +608,7 @@ const MeetTheTeam: React.FC = () => {
             <div className="absolute bottom-0 inset-x-0 p-7 md:p-10 flex items-end justify-between gap-6">
               <div>
                 <p className="text-[9px] font-bold tracking-[0.45em] text-[#e3261d] uppercase mb-2">
-                  Est. 2010 · Muscat, Oman
+                  Est. 1999 · Muscat, Oman
                 </p>
                 <p className="font-display text-2xl md:text-3xl font-bold text-white leading-tight">
                   The Al Maha Team
@@ -623,7 +618,7 @@ const MeetTheTeam: React.FC = () => {
               {/* Bottom-right: quick stat */}
               <div className="flex-shrink-0 text-right hidden sm:block">
                 <p className="font-display text-4xl md:text-5xl font-black text-white/10 leading-none select-none">
-                  41+
+                  25+
                 </p>
                 <p className="text-white/25 text-[9px] tracking-[0.25em] uppercase mt-0.5">
                   Combined Years
@@ -633,36 +628,7 @@ const MeetTheTeam: React.FC = () => {
           </div>
 
           {/* ── Caption / member strip ── */}
-          <div
-            className={`mt-4 rounded-2xl border border-white/8 bg-white/[0.03] px-6 md:px-8 py-5 transition-all duration-700 ease-out
-              ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-            style={{ transitionDelay: visible ? '300ms' : '0ms' }}
-          >
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-
-              {/* Left: individual credits */}
-              <div className="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-0 sm:divide-x sm:divide-white/8">
-                {team.map((member) => (
-                  <div key={member.name} className="sm:px-6 first:pl-0 last:pr-0">
-                    <div className="flex items-center gap-2 mb-0.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#e3261d] flex-shrink-0" />
-                      <p className="text-white text-sm font-semibold leading-none">{member.name}</p>
-                    </div>
-                    <p className="text-white/35 text-[10px] tracking-[0.12em] uppercase pl-3.5">{member.role}</p>
-                    <p className="text-white/20 text-[9px] leading-snug pl-3.5 mt-0.5">{member.specialty}</p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Right: live indicator */}
-              <div className="flex items-center gap-2 flex-shrink-0">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#e3261d] animate-pulse" />
-                <span className="text-white/25 text-[10px] tracking-[0.3em] uppercase font-bold">
-                  Al Maha Tourism
-                </span>
-              </div>
-            </div>
-          </div>
+ 
         </div>
 
         {/* ── Collective team quote ── */}
@@ -686,7 +652,7 @@ const MeetTheTeam: React.FC = () => {
           {/* Stats row */}
           <div className="flex items-center justify-center gap-10 mt-12">
             {[
-              { value: '41+', label: 'Combined Years' },
+              { value: '25+', label: 'Combined Years' },
               { value: '50K+', label: 'Journeys Crafted' },
               { value: '4.9★', label: 'Average Rating' },
             ].map((s, i, arr) => (

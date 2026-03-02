@@ -227,56 +227,7 @@ const ReviewsSection: React.FC = () => {
         </div>
 
         {/* ── Trust bar ── */}
-        <div className={`mt-12 pt-10 border-t border-neutral-100 transition-all duration-700 ease-out delay-300
-          ${featuredVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-            {/* Left: social proof line */}
-            <div className="flex items-center gap-4">
-              {/* Stacked avatars */}
-              <div className="flex -space-x-2.5">
-                {['S', 'J', 'F', 'A'].map((l, i) => (
-                  <div
-                    key={i}
-                    className="w-8 h-8 rounded-full bg-primary-dark border-2 border-white flex items-center justify-center text-white text-[10px] font-bold"
-                  >
-                    {l}
-                  </div>
-                ))}
-                <div className="w-8 h-8 rounded-full bg-neutral-100 border-2 border-white flex items-center justify-center text-neutral-500 text-[9px] font-bold">
-                  500+
-                </div>
-              </div>
-              <div>
-                <div className="flex items-center gap-1.5">
-                  <Stars count={5} size="w-3 h-3" />
-                  <span className="text-primary-dark text-xs font-bold">4.9</span>
-                </div>
-                <p className="text-neutral-400 text-xs mt-0.5">Trusted by 500+ travellers worldwide</p>
-              </div>
-            </div>
 
-            {/* Right: CTA */}
-            <button className="group flex items-center gap-4 flex-shrink-0">
-              <span className="text-[13px] font-bold tracking-wide text-neutral-500 group-hover:text-primary-dark transition-colors duration-300 uppercase">
-                Read All Reviews
-              </span>
-              <div className="w-11 h-11 rounded-full bg-primary-dark flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.12)] transition-all duration-300"
-                style={{ transition: 'background-color 0.3s, box-shadow 0.3s' }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#e3261d';
-                  e.currentTarget.style.boxShadow = '0 6px 24px rgba(227, 38, 29, 0.4)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = '';
-                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.12)';
-                }}>
-                <svg className="w-4 h-4 text-white group-hover:translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </div>
-            </button>
-          </div>
-        </div>
 
       </div>
     </section>

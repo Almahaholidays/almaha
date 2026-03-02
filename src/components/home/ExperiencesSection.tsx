@@ -21,7 +21,7 @@ const experiences = [
     title: 'Heritage Tours',
     description: `Ancient forts, traditional souks, and UNESCO World Heritage sites in Oman's cultural heartland.`,
     count: '18+ Sites',
-    image: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=900&q=80',
+    image: '/destinations/NizwaFort.jpg',
   },
   {
     tag: 'Mountains',

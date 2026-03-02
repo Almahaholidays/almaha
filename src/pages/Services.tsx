@@ -25,7 +25,7 @@ const services = [
     title: 'Culture Tour',
     subtitle: 'Heritage & Traditions',
     description: "Immerse yourself in Oman's rich cultural heritage, ancient forts, and vibrant souqs.",
-    image: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=1400&q=80',
+    image: '/destinations/NizwaFort.jpg',
     slug: 'culture-tour',
     tag: 'Heritage',
   },

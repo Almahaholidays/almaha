@@ -14,9 +14,9 @@ interface Photo {
 
 const photos: Photo[] = [
   // Destinations
-  { id: 1,  url: 'https://images.unsplash.com/photo-1583309219338-c2ec0a6c3b46?w=900&q=80', title: 'Muscat', sub: 'The Vibrant Capital', category: 'Destinations', aspect: 'portrait' },
+  { id: 1,  url: 'https://images.unsplash.com/photo-1601890976279-0b4ff3233938?w=900&q=80', title: 'Muscat', sub: 'The Vibrant Capital', category: 'Destinations', aspect: 'portrait' },
   { id: 2,  url: 'https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=900&q=80', title: 'Wahiba Sands', sub: 'Golden Desert Dunes', category: 'Destinations', aspect: 'landscape' },
-  { id: 3,  url: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=900&q=80', title: 'Nizwa Fort', sub: 'Cultural Heartland', category: 'Destinations', aspect: 'square' },
+  { id: 3,  url: '/destinations/NizwaFort.jpg', title: 'Nizwa Fort', sub: 'Cultural Heartland', category: 'Destinations', aspect: 'square' },
   { id: 4,  url: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&q=80', title: 'Salalah', sub: 'Tropical Paradise', category: 'Destinations', aspect: 'landscape' },
   { id: 5,  url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80', title: 'Jebel Akhdar', sub: 'Mountain Retreat', category: 'Destinations', aspect: 'portrait' },
   { id: 6,  url: 'https://images.unsplash.com/photo-1520454974749-611b7248ffdb?w=900&q=80', title: 'Sur', sub: 'Coastal Heritage', category: 'Destinations', aspect: 'landscape' },

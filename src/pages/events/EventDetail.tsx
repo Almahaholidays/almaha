@@ -22,7 +22,7 @@ const eventData: Record<string, EventData> = {
     title: 'MICE',
     fullName: 'Meetings, Incentives, Conferences & Exhibitions',
     tagline: 'Where Business Meets Excellence',
-    hero: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=1920&q=80',
+    hero: '/mice/mice2.jpeg',
     description: 'Transform your corporate events into memorable experiences with our world-class venues, seamless logistics, and professional event management services.',
     longDescription: 'From intimate board meetings to large-scale international conferences, we provide comprehensive MICE solutions that elevate your corporate events. Our expert team handles everything from venue selection and technical setup to catering and entertainment, ensuring your event runs flawlessly while you focus on your business objectives.',
     features: [
@@ -64,7 +64,7 @@ const eventData: Record<string, EventData> = {
     title: 'FIT',
     fullName: 'Free Independent Traveler',
     tagline: 'Your Journey, Your Way',
-    hero: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&q=80',
+    hero: '/fit/SoloCamelRide.jpg',
     description: 'Explore Oman at your own pace with our personalized itineraries, flexible schedules, and tailored experiences designed just for you.',
     longDescription: 'Freedom meets expertise with our FIT services. Whether you\'re a solo adventurer or traveling with family, we craft bespoke journeys that reflect your interests and pace. From hidden gems to iconic landmarks, experience Oman your way with our expert guidance and full flexibility.',
     features: [
@@ -106,7 +106,7 @@ const eventData: Record<string, EventData> = {
     title: 'GROUP',
     fullName: 'Group Tours & Travel',
     tagline: 'Share the Adventure',
-    hero: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&q=80',
+    hero: '/group/GroupCampfire.jpg',
     description: 'Join fellow adventurers on curated group journeys that blend camaraderie, culture, and unforgettable moments across Oman.',
     longDescription: 'Experience the joy of shared discovery with our expertly guided group tours. Meet like-minded travelers, share incredible moments, and enjoy the benefits of group travel while exploring Oman\'s treasures. Our small group sizes ensure personal attention and authentic connections.',
     features: [

@@ -37,7 +37,7 @@ const destinations: Record<string, DestinationData> = {
     bestSeason: 'Oct – Apr',
     distanceFromMuscat: 'Capital City',
     toursCount: '40+',
-    heroImage: 'https://images.unsplash.com/photo-1583309219338-c2ec0a6c3b46?w=1920&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1601890976279-0b4ff3233938?w=1920&q=80',
     tagline: 'Where ancient Arabia meets the modern world along a glittering coastline.',
     about:
       'Muscat is one of the most captivating capitals in the Arab world — a city that balances grandeur and intimacy. Nestled between the rugged Hajar Mountains and the turquoise waters of the Gulf of Oman, it offers a seamless fusion of heritage and contemporary life. From the gilded domes of the Sultan Qaboos Grand Mosque to the labyrinthine alleys of Mutrah Souq, every corner tells a story centuries in the making.',
@@ -65,7 +65,7 @@ const destinations: Record<string, DestinationData> = {
       },
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1583309219338-c2ec0a6c3b46?w=900&q=80',
+      'https://images.unsplash.com/photo-1601890976279-0b4ff3233938?w=900&q=80',
       'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=900&q=80',
       'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=900&q=80',
       'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=80',
@@ -121,7 +121,7 @@ const destinations: Record<string, DestinationData> = {
     bestSeason: 'Oct – Mar',
     distanceFromMuscat: '~165 km',
     toursCount: '18+',
-    heroImage: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=1920&q=80',
+    heroImage: '/destinations/NizwaFort.jpg',
     tagline: 'The ancient cultural heartland of Oman — where forts, souqs, and traditions endure.',
     about:
       'Nizwa served as the capital of Oman for centuries and remains the country\'s cultural soul. Dominated by its monumental 17th-century round fort — the largest in Oman — the city sits in a fertile valley surrounded by date palms and mountain ranges. The Friday livestock market, where goats and cattle are traded exactly as they were a thousand years ago, is one of the most visceral and authentic experiences in the entire Arabian Peninsula.',
@@ -135,7 +135,7 @@ const destinations: Record<string, DestinationData> = {
       {
         title: 'Nizwa Fort & Old Souq Immersion',
         description: 'Climb the massive cylindrical tower of Nizwa Fort for sweeping views over the palm groves and city, then descend into the adjacent souq — one of Oman\'s most evocative markets — where the smell of frankincense mingles with silver, spices, and traditional Omani textiles.',
-        image: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=900&q=80',
+        image: '/destinations/NizwaFort.jpg',
       },
       {
         title: 'Friday Goat Market at Dawn',
@@ -149,7 +149,7 @@ const destinations: Record<string, DestinationData> = {
       },
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=900&q=80',
+      '/destinations/NizwaFort.jpg',
       'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=80',
       'https://images.unsplash.com/photo-1583309219338-c2ec0a6c3b46?w=900&q=80',
       'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&q=80',
@@ -163,7 +163,7 @@ const destinations: Record<string, DestinationData> = {
     bestSeason: 'Jun – Sep (Khareef)',
     distanceFromMuscat: '~1,000 km',
     toursCount: '22+',
-    heroImage: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&q=80',
+    heroImage: 'https://cdn.pixabay.com/photo/2020/07/06/13/33/wadi-5377073_1280.jpg',
     tagline: 'Arabia\'s tropical secret — where monsoon mists turn the desert lush and green each summer.',
     about:
       'Salalah is unlike anywhere else in Arabia. Each summer, the Khareef monsoon rolls in from the Indian Ocean, transforming the Dhofar region into a landscape of extraordinary green: cascading waterfalls, mist-draped plateaux, and frankincense trees glistening with moisture. Outside the monsoon, Salalah reveals pristine white-sand beaches, ancient incense trading ports, and a distinct Dhofari culture that sets it apart from the rest of Oman.',
@@ -205,7 +205,7 @@ const destinations: Record<string, DestinationData> = {
     bestSeason: 'Mar – Nov',
     distanceFromMuscat: '~150 km',
     toursCount: '15+',
-    heroImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80',
+    heroImage: '/destinations/jebelAkhdar.jpg',
     tagline: 'The "Green Mountain" — rose gardens, ancient terraces, and cool air 2,000 metres above Oman.',
     about:
       'Jebel Akhdar — Arabic for "Green Mountain" — rises dramatically to over 2,000 metres on the Al Hajar range and offers a climate and landscape utterly unlike the Omani lowlands below. Ancient terraced villages cling to vertiginous cliffs, their falaj irrigation systems distributing mountain spring water to gardens of damask roses, pomegranates, apricots, and walnuts. The rose harvest each spring produces the prized Omani rose water that has graced tables and temples for centuries.',
@@ -247,7 +247,7 @@ const destinations: Record<string, DestinationData> = {
     bestSeason: 'Oct – Apr',
     distanceFromMuscat: '~200 km',
     toursCount: '12+',
-    heroImage: 'https://images.unsplash.com/photo-1520454974749-611b7248ffdb?w=1920&q=80',
+    heroImage: 'https://cdn.pixabay.com/photo/2021/01/30/12/30/oman-5963720_1280.jpg',
     tagline: 'A proud maritime city where ancient dhow builders and nesting sea turtles share the same shore.',
     about:
       'Sur has sailed to the edges of the known world and back. For centuries, its master shipbuilders constructed the great wooden dhows that connected Oman to East Africa, India, and Persia — and they still do today. The dhow building yard on the creek remains one of the last active traditional shipyards on earth. But Sur\'s other marvel lies just south at Ras Al Jinz: one of the largest green turtle nesting grounds in the Indian Ocean, where hundreds of ancient creatures emerge from the sea each night under protective darkness.',

@@ -441,16 +441,16 @@ const Opener: React.FC = () => (
             value: EMAIL,
             href: `mailto:${EMAIL}`,
           },
-          // {
-          //   icon: (
-          //     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          //       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          //     </svg>
-          //   ),
-          //   label: 'Response time',
-          //   value: 'Within 24 hours',
-          //   href: null,
-          // },
+          {
+            icon: (
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            ),
+            label: 'Response time',
+            value: 'Within 24 hours',
+            href: null,
+          },
         ].map((ch) => (
           <React.Fragment key={ch.label}>
             <div className="flex items-center justify-between gap-6 py-5 group">

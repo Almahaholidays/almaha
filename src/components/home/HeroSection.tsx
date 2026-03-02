@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
       subtitle: 'Travelling along winding roads through mountains, beaches, and ancient backwaters',
     },
     {
-      image: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=1920&q=80',
+      image: '/destinations/NizwaFort.jpg',
       title: 'Ancient Forts & Heritage',
       subtitle: 'Journey through time exploring magnificent forts and cultural treasures',
     },

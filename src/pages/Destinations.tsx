@@ -14,7 +14,7 @@ const destinations = [
     highlights: '40+ Tours',
     bestFor: 'Culture, Architecture, Coastline',
     description: 'The vibrant capital blending modernity with ancient Arabian charm — where grand mosques meet a glittering coastline.',
-    image: 'https://images.unsplash.com/photo-1583309219338-c2ec0a6c3b46?w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1601890976279-0b4ff3233938?w=1200&q=80',
   },
   {
     slug: 'wahiba-sands',
@@ -34,7 +34,7 @@ const destinations = [
     highlights: '18+ Tours',
     bestFor: 'Forts, Souqs, Old Villages',
     description: 'Historic forts and traditional souks in the cultural heartland of Oman.',
-    image: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=1200&q=80',
+    image: '/destinations/NizwaFort.jpg',
   },
   {
     slug: 'salalah',
@@ -44,7 +44,7 @@ const destinations = [
     highlights: '22+ Tours',
     bestFor: 'Monsoon, Beaches, Frankincense',
     description: 'Tropical paradise with misty monsoons, frankincense groves, and pristine beaches.',
-    image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80',
+    image: 'https://cdn.pixabay.com/photo/2020/07/06/13/33/wadi-5377073_1280.jpg',
   },
   {
     slug: 'jebel-akhdar',
@@ -54,7 +54,7 @@ const destinations = [
     highlights: '15+ Tours',
     bestFor: 'Rose Gardens, Trekking, Wadis',
     description: 'Terraced rose gardens and cool mountain retreats high above the Omani plains.',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80',
+    image: '/destinations/jebelAkhdar.jpg',
   },
   {
     slug: 'sur',
@@ -64,7 +64,7 @@ const destinations = [
     highlights: '12+ Tours',
     bestFor: 'Dhow Building, Sea Turtles, Lagoon',
     description: 'Ancient shipbuilding traditions meet pristine coastline where sea turtles nest each night.',
-    image: 'https://images.unsplash.com/photo-1520454974749-611b7248ffdb?w=1200&q=80',
+    image: 'https://cdn.pixabay.com/photo/2021/01/30/12/30/oman-5963720_1280.jpg',
   },
 ];
 

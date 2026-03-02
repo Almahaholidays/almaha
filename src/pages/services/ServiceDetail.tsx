@@ -74,7 +74,7 @@ const serviceData: Record<string, ServiceData> = {
   'culture-tour': {
     title: 'Culture Tour',
     subtitle: 'Heritage & Traditions',
-    hero: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=1920&q=80',
+    hero: '/destinations/NizwaFort.jpg',
     description: 'Immerse yourself in Oman\'s rich heritage with a 1-day culture tour. Visit historic forts, traditional markets, and ancient villages, guided by local experts. Discover the stories, architecture, and traditions that define Omani culture all in a single unforgettable day.',
     features: [
       'UNESCO World Heritage sites',
@@ -93,7 +93,7 @@ const serviceData: Record<string, ServiceData> = {
     groupSize: '2-15 People',
     includes: ['Cultural guide', 'Entrance fees', 'Traditional lunch', 'Transportation', 'Water'],
     gallery: [
-      'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=800&q=80',
+      '/destinations/NizwaFort.jpg',
       'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
       'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80'
     ]
