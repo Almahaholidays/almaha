@@ -363,12 +363,6 @@ const EventDetail: React.FC = () => {
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#c01f18] to-[#e3261d] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
               </Link>
-              <Link
-                to="/services"
-                className="px-10 py-4 rounded-full border-2 border-white/20 text-white font-bold hover:bg-white/10 transition-all"
-              >
-                All Services
-              </Link>
             </div>
           </div>
         </div>
@@ -665,12 +659,6 @@ const EventDetail: React.FC = () => {
                 className="px-12 py-5 bg-white text-[#4e3779] font-black rounded-full hover:bg-neutral-100 transition-all duration-300 shadow-2xl hover:scale-105 text-lg"
               >
                 Get Started
-              </Link>
-              <Link
-                to="/services"
-                className="px-12 py-5 border-3 border-white text-white font-black rounded-full hover:bg-white/10 transition-all duration-300 text-lg"
-              >
-                View All Services
               </Link>
             </div>
           </AnimatedSection>
