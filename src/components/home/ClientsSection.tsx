@@ -41,7 +41,7 @@ const row2 = partners.slice(13, 25);
 const LogoImg: React.FC<{ logo: string; name: string }> = ({ logo, name }) => {
   return (
     <img
-      src={`/partners_logo/${logo}`}
+      src={`${import.meta.env.BASE_URL}partners_logo/${logo}`}
       alt={name}
       className="max-h-20 max-w-[170px] w-auto object-contain
         group-hover:scale-105

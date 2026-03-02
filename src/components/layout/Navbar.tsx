@@ -112,8 +112,8 @@ const events = [
     ),
   },
   {
-    label: 'Groups',
-    href: '/events/groups',
+    label: 'Group',
+    href: '/events/group',
     description: 'Large group tours & custom experiences',
     highlight: 'Special',
     icon: (
@@ -222,7 +222,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
               <img
-                src="/almaha_logo1.png"
+                src={`${import.meta.env.BASE_URL}almaha_logo1.png`}
                 alt="Al Maha Tourism"
                 className="h-12 md:h-14 object-contain"
               />
@@ -626,26 +626,55 @@ export default function Navbar() {
         <nav className="flex flex-col px-6 pt-28 pb-12 h-full overflow-y-auto">
           {/* Main Nav Items */}
           <div className="space-y-1">
-            {['Home', 'Our Experiences', 'Our Services', ...navItems.slice(1).map(i => i.label)].map((label, index) => (
-              <a
-                key={label}
-                href={label === 'Our Experiences' || label === 'Our Services' ? '#' : navItems.find(i => i.label === label)?.href || '/'}
+            <Link
+              to="/"
+              className={`block py-4 font-['Lato'] text-[2rem] font-bold tracking-[-0.02em] text-white/40 hover:text-white transition-all duration-300 border-b border-white/5`}
+              style={{
+                opacity: isMenuOpen ? 1 : 0,
+                transform: isMenuOpen ? 'translateY(0)' : 'translateY(20px)',
+                transition: `opacity 0.4s ease 0s, transform 0.4s ease 0s`,
+              }}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+
+            <div
+              className={`block py-4 font-['Lato'] text-[2rem] font-bold tracking-[-0.02em] text-white/40 hover:text-white transition-all duration-300 border-b border-white/5 cursor-default`}
+              style={{
+                opacity: isMenuOpen ? 1 : 0,
+                transform: isMenuOpen ? 'translateY(0)' : 'translateY(20px)',
+                transition: `opacity 0.4s ease 0.05s, transform 0.4s ease 0.05s`,
+              }}
+            >
+              Our Experiences
+            </div>
+
+            <div
+              className={`block py-4 font-['Lato'] text-[2rem] font-bold tracking-[-0.02em] text-white/40 hover:text-white transition-all duration-300 border-b border-white/5 cursor-default`}
+              style={{
+                opacity: isMenuOpen ? 1 : 0,
+                transform: isMenuOpen ? 'translateY(0)' : 'translateY(20px)',
+                transition: `opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s`,
+              }}
+            >
+              Our Services
+            </div>
+
+            {navItems.slice(1).map((item, index) => (
+              <Link
+                key={item.label}
+                to={item.href}
                 className={`block py-4 font-['Lato'] text-[2rem] font-bold tracking-[-0.02em] text-white/40 hover:text-white transition-all duration-300 border-b border-white/5`}
                 style={{
                   opacity: isMenuOpen ? 1 : 0,
                   transform: isMenuOpen ? 'translateY(0)' : 'translateY(20px)',
-                  transition: `opacity 0.4s ease ${index * 0.05}s, transform 0.4s ease ${index * 0.05}s`,
+                  transition: `opacity 0.4s ease ${(index + 3) * 0.05}s, transform 0.4s ease ${(index + 3) * 0.05}s`,
                 }}
-                onClick={(e) => {
-                  if (label === 'Our Experiences' || label === 'Our Services') {
-                    e.preventDefault();
-                  } else {
-                    setIsMenuOpen(false);
-                  }
-                }}
+                onClick={() => setIsMenuOpen(false)}
               >
-                {label}
-              </a>
+                {item.label}
+              </Link>
             ))}
           </div>
 
@@ -721,8 +750,8 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="mt-auto pt-8">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center justify-center gap-3 w-full py-4 font-['Lato'] text-[0.9rem] font-semibold text-white rounded-full transition-all duration-300"
               style={{ backgroundColor: '#e3261d', transition: 'background-color 0.3s' }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(227, 38, 29, 0.8)'}
@@ -739,7 +768,7 @@ export default function Navbar() {
               >
                 <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1.5" />
               </svg>
-            </a>
+            </Link>
           </div>
 
           {/* Contact Info */}

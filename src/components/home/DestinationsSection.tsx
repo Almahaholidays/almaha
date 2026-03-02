@@ -206,7 +206,7 @@ const DestinationsSection: React.FC = () => {
               preload="auto"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             >
-              <source src="/videos/bgv1.mp4" type="video/mp4" />
+              <source src={`${import.meta.env.BASE_URL}videos/bgv1.mp4`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
