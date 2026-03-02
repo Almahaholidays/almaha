@@ -232,7 +232,7 @@ export default function Navbar() {
             <nav className="hidden lg:flex items-center justify-center gap-8 flex-1">
               <Link
                 to="/"
-                className={`px-4 py-2 rounded-full font-['Lato'] text-[0.8rem] uppercase tracking-[0.08em] transition-all duration-300 ${
+                className={`relative px-4 py-2 rounded-full font-['Lato'] text-[0.8rem] uppercase tracking-[0.08em] transition-all duration-300 ${
                   location.pathname === '/'
                     ? 'text-black'
                     : 'text-black/60 hover:text-black hover:bg-black/5'

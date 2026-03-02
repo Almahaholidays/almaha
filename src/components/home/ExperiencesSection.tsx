@@ -117,7 +117,7 @@ const ExperiencesSection: React.FC = () => {
                 </div>
                 <div className="w-px h-10 bg-neutral-300" />
                 <div>
-                  <p className="font-display text-3xl font-bold text-primary-dark leading-none">15+</p>
+                  <p className="font-display text-3xl font-bold text-primary-dark leading-none">25+</p>
                   <p className="text-neutral-400 text-[10px] tracking-[0.25em] uppercase mt-1">Years</p>
                 </div>
               </div>

@@ -9,7 +9,8 @@
       "WebFetch(domain:www.thjnk.de)",
       "WebFetch(domain:www.kryil.com)",
       "mcp__ide__getDiagnostics",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "WebFetch(domain:unsplash.com)"
     ]
   }
 }

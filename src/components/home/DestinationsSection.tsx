@@ -177,7 +177,7 @@ const DestinationsSection: React.FC = () => {
                 </div>
                 <div className="w-px h-10 bg-white/10" />
                 <div>
-                  <p className="text-white font-display text-3xl font-bold leading-none">15+</p>
+                  <p className="text-white font-display text-3xl font-bold leading-none">25+</p>
                   <p className="text-white/25 text-[10px] tracking-[0.25em] uppercase mt-1">Years Experience</p>
                 </div>
                 <div className="w-px h-10 bg-white/10" />

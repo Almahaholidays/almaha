@@ -117,7 +117,7 @@ const ReviewsSection: React.FC = () => {
                 <p className="text-white/30 text-[10px] tracking-[0.2em] uppercase mt-1">Happy Travellers</p>
               </div>
               <div>
-                <p className="text-white font-display text-2xl font-bold leading-none">15+</p>
+                <p className="text-white font-display text-2xl font-bold leading-none">25+</p>
                 <p className="text-white/30 text-[10px] tracking-[0.2em] uppercase mt-1">Years of Service</p>
               </div>
             </div>

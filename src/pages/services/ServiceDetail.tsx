@@ -863,7 +863,7 @@ const ServiceDetail: React.FC = () => {
 
             {/* Trust strip */}
             <div className="flex gap-10 pt-8 border-t border-white/8">
-              {[['500+', 'Happy Travelers'], ['15+', 'Yrs Experience'], ['4.9★', 'Avg Rating']].map(([val, label], i) => (
+              {[['500+', 'Happy Travelers'], ['25+', 'Yrs Experience'], ['4.9★', 'Avg Rating']].map(([val, label], i) => (
                 <div key={label}>
                   <p
                     className="text-2xl font-black leading-none"

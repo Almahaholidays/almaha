@@ -221,7 +221,7 @@ const StatsStrip: React.FC = () => {
   const stats = [
     { value: '4', label: 'Experience Types' },
     { value: '1,000+', label: 'Events Delivered' },
-    { value: '15+', label: 'Years in Oman' },
+    { value: '25+', label: 'Years in Oman' },
     { value: '50K+', label: 'Happy Guests' },
   ];
 
@@ -484,7 +484,7 @@ const TrustBar: React.FC = () => {
   const visible = !!entry?.isIntersecting;
 
   const items = [
-    { icon: '✦', text: '15+ Years of Expertise' },
+    { icon: '✦', text: '25+ Years of Expertise' },
     { icon: '✦', text: 'Award-Winning Team' },
     { icon: '✦', text: '50,000+ Satisfied Guests' },
     { icon: '✦', text: 'Fully Licensed & Insured' },

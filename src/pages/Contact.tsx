@@ -6,7 +6,6 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 ───────────────────────────────────────────── */
 const PHONE   = '+968 7602 4816';
 const EMAIL   = 'salessupport@almahaholidays.com';
-const ADDRESS = 'Muscat, Sultanate of Oman';
 
 const tourTypes = [
   'Desert Safari',
@@ -34,7 +33,7 @@ const Arrow: React.FC<{ className?: string }> = ({ className }) => (
 const travellersOptions = [
   {
     value: '1',
-    label: 'Solo Traveller',
+    // label: 'Solo Traveller',
     desc: '1 person',
     icon: (
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -44,7 +43,7 @@ const travellersOptions = [
   },
   {
     value: '2',
-    label: 'Couple',
+    // label: 'Couple',
     desc: '2 people',
     icon: (
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -55,7 +54,7 @@ const travellersOptions = [
   },
   {
     value: '3-4',
-    label: 'Small Group',
+    // label: 'Small Group',
     desc: '3–4 people',
     icon: (
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -67,7 +66,7 @@ const travellersOptions = [
   },
   {
     value: '5-8',
-    label: 'Group',
+    // label: 'Group',
     desc: '5–8 people',
     icon: (
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -78,7 +77,7 @@ const travellersOptions = [
   },
   {
     value: '9-15',
-    label: 'Large Group',
+    // label: 'Large Group',
     desc: '9–15 people',
     icon: (
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -90,7 +89,7 @@ const travellersOptions = [
   },
   {
     value: '16+',
-    label: 'Event / Corporate',
+    // label: 'Event / Corporate',
     desc: '16+ people',
     icon: (
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -122,7 +121,7 @@ const TravellersSelect: React.FC<{ value: string; onChange: (v: string) => void 
         className={`w-full flex items-center justify-between gap-3 pb-3 border-b transition-colors duration-300 text-left outline-none ${open ? 'border-[#e3261d]' : 'border-neutral-200'}`}
       >
         <span className={`text-base ${selected ? 'text-primary-dark' : 'text-neutral-300'}`}>
-          {selected ? `${selected.label} — ${selected.desc}` : 'Select travellers'}
+          {selected ? selected.desc : 'Select travellers'}
         </span>
         <svg className={`w-4 h-4 text-neutral-400 flex-shrink-0 transition-transform duration-300 ${open ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -144,7 +143,7 @@ const TravellersSelect: React.FC<{ value: string; onChange: (v: string) => void 
                 {opt.icon}
               </div>
               <div className="flex-1 min-w-0">
-                <p className={`text-sm font-bold leading-tight transition-colors duration-200 ${isSelected ? 'text-[#e3261d]' : 'text-primary-dark'}`}>{opt.label}</p>
+                <p className={`text-sm font-bold leading-tight transition-colors duration-200 ${isSelected ? 'text-[#e3261d]' : 'text-primary-dark'}`}>{opt.desc}</p>
                 <p className="text-xs text-neutral-400 mt-0.5">{opt.desc}</p>
               </div>
               {isSelected && (
@@ -442,16 +441,16 @@ const Opener: React.FC = () => (
             value: EMAIL,
             href: `mailto:${EMAIL}`,
           },
-          {
-            icon: (
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            ),
-            label: 'Response time',
-            value: 'Within 24 hours',
-            href: null,
-          },
+          // {
+          //   icon: (
+          //     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          //       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          //     </svg>
+          //   ),
+          //   label: 'Response time',
+          //   value: 'Within 24 hours',
+          //   href: null,
+          // },
         ].map((ch) => (
           <React.Fragment key={ch.label}>
             <div className="flex items-center justify-between gap-6 py-5 group">
@@ -760,37 +759,20 @@ const ContactSidebar: React.FC = () => {
           </div>
         </div>
 
-        {/* Map placeholder */}
+        {/* Map */}
         <div>
           <p className="text-[10px] font-bold tracking-[0.4em] text-[#e3261d] uppercase mb-6">Our Location</p>
-          <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-primary-dark">
-            {/* Styled map placeholder */}
-            <div className="absolute inset-0 opacity-20"
-              style={{
-                backgroundImage: `
-                  linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)
-                `,
-                backgroundSize: '32px 32px',
-              }}
+          <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4581661625643!2d58.355419299999994!3d23.587896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e91f8c9e2bbb84f%3A0xd679d3cf1dcdb742!2sAl%20Maha%20Rent%20A%20Car%20(Al%20Hajiry%20Group)!5e0!3m2!1sen!2sin!4v1772450459508!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Al Maha Location"
             />
-            {/* Center pin */}
-            <div className="absolute inset-0 flex items-center justify-center flex-col gap-3">
-              <div className="w-12 h-12 rounded-full bg-[#e3261d]/20 border border-[#e3261d]/40 flex items-center justify-center">
-                <svg className="w-5 h-5 text-[#e3261d]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                </svg>
-              </div>
-              <div className="text-center">
-                <p className="text-white text-sm font-bold">{ADDRESS}</p>
-                <p className="text-white/40 text-[10px] tracking-[0.2em] uppercase mt-1">Al Maha Tourism HQ</p>
-              </div>
-            </div>
-
-            {/* Subtle glow at pin */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="w-32 h-32 rounded-full bg-[#e3261d]/10 blur-2xl" />
-            </div>
           </div>
         </div>
 

@@ -238,7 +238,7 @@ const ContactUsSection: React.FC = () => {
         {/* Full Width Map */}
         <div className={`w-full h-[300px] overflow-hidden border-2 border-neutral-200 ${isVisible ? 'opacity-100 animate-fade-in' : 'opacity-0'}`}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58271.08395048334!2d58.38289542167969!3d23.588584999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e91ff31e51e611b%3A0x766bf918e718d4e!2sMuscat%2C%20Oman!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4581661625643!2d58.355419299999994!3d23.587896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e91f8c9e2bbb84f%3A0xd679d3cf1dcdb742!2sAl%20Maha%20Rent%20A%20Car%20(Al%20Hajiry%20Group)!5e0!3m2!1sen!2sin!4v1772450459508!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0 }}

@@ -178,7 +178,7 @@ const ClientsSection: React.FC = () => {
           <div className="flex items-center justify-center gap-8 flex-wrap">
             {[
               { value: '25+',  label: 'Trusted Clients'   },
-              { value: '15+',  label: 'Years Experience'  },
+              { value: '25+',  label: 'Years Experience'  },
               { value: '500+', label: 'Successful Events' },
             ].map((stat, i, arr) => (
               <React.Fragment key={stat.label}>

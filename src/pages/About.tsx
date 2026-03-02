@@ -771,7 +771,7 @@ const CTA: React.FC = () => {
 
             {/* Trust micro-strip */}
             <div className="flex items-center gap-6 pt-2 border-t border-white/10">
-              {[{ v: '50K+', l: 'Travellers' }, { v: '4.9★', l: 'Rated' }, { v: '15+', l: 'Years' }].map((s, i, arr) => (
+              {[{ v: '50K+', l: 'Travellers' }, { v: '4.9★', l: 'Rated' }, { v: '25+', l: 'Years' }].map((s, i, arr) => (
                 <React.Fragment key={s.l}>
                   <div>
                     <p className="font-display text-xl font-bold text-white leading-none">{s.v}</p>
