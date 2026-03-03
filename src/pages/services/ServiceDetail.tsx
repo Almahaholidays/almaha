@@ -40,14 +40,14 @@ const serviceData: Record<string, ServiceData> = {
     includes: ['Expert guides', 'Camping gear', 'All meals', '4x4 transfers', 'Permits'],
     gallery: [
       'https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80',
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80'
+      '/trekkingExp/trekkExp1.jpeg',
+      '/trekkingExp/trekkExp2.jpeg'
     ]
   },
   'canyoning-caving': {
     title: 'Canyoning & Caving',
     subtitle: 'Extreme Adventure Exploration',
-    hero: 'https://images.unsplash.com/photo-1533130061792-64b345e4a833?w=1920&q=80',
+    hero: 'cannyoning.jpg',
     description: 'Dive into adventure with a thrilling 1-day canyoning and caving experience. Explore hidden caves, rappel down waterfalls, and navigate through narrow gorges. Perfect for adrenaline seekers, this guided tour showcases Oman\'s wild side in a safe and unforgettable way.',
     features: [
       'Professional safety equipment',
@@ -66,9 +66,9 @@ const serviceData: Record<string, ServiceData> = {
     groupSize: '4-8 People',
     includes: ['Safety equipment', 'Expert guides', 'Lunch & water', 'Transportation', 'Insurance'],
     gallery: [
-      'https://images.unsplash.com/photo-1533130061792-64b345e4a833?w=800&q=80',
-      'https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&q=80',
-      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&q=80'
+      'canyonningExp/canyonning.jpeg',
+      'canyonningExp/canyonning1.jpeg',
+      'cannyoning.jpg'
     ]
   },
   'culture-tour': {
@@ -101,7 +101,7 @@ const serviceData: Record<string, ServiceData> = {
   'car-rental': {
     title: 'Car Rental',
     subtitle: 'Flexible Mobility Solutions',
-    hero: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1920&q=80',
+    hero: '/carAboutUs.jpeg',
     description: 'We offer reliable car rental services with a range of vehicles including compact cars, SUVs, and 4x4s – perfect for exploring Oman at your own pace. All vehicles are well-maintained and available with optional insurance, GPS, and 24/7 support.',
     features: [
       'Wide range of vehicles',
@@ -120,8 +120,8 @@ const serviceData: Record<string, ServiceData> = {
     groupSize: 'Any',
     includes: ['Full tank', 'Insurance options', 'GPS available', '24/7 support', 'Delivery service'],
     gallery: [
-      'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80',
-      'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80',
+      '/carAboutUs.jpeg',
+      '/carExp/carRental.jpeg',
       'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=80'
     ]
   },
@@ -155,7 +155,7 @@ const serviceData: Record<string, ServiceData> = {
   'adventure-tour': {
     title: 'Adventure Tour',
     subtitle: 'Thrilling Multi-Activity Experience',
-    hero: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80',
+    hero: '/adventureExperiences.jpeg',
     description: 'We specialize in providing unique and thrilling adventure experiences for people of all ages. With multiple facilities across Oman, we offer both adventure and city tours with mountain climbing, guided tours, first climbing gym in Oman, and professional equipment.',
     features: [
       'Multi-activity adventures',
@@ -174,9 +174,9 @@ const serviceData: Record<string, ServiceData> = {
     groupSize: '4-10 People',
     includes: ['All equipment', 'Professional guides', 'Meals', 'Accommodation', 'Training'],
     gallery: [
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
-      'https://images.unsplash.com/photo-1522163182402-834f871fd851?w=800&q=80',
-      'https://images.unsplash.com/photo-1476611338391-6f395a0ebc7b?w=800&q=80'
+      '/adventureExperiences.jpeg',
+      '/adventureExp/adventureExp2.jpeg',
+      '/adventureExp/adventureExp1.jpeg'
     ]
   }
 };

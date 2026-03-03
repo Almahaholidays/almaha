@@ -164,7 +164,7 @@ const OurStory: React.FC = () => {
               {[
                 { year: '2010', text: 'Founded in Muscat with a single jeep and a profound belief that Oman\'s wonders deserved to be shared with the world. Our first guests were three adventurous travellers from Germany.' },
                 { year: '2015', text: 'Expanded into cultural heritage tours, deep-desert expeditions, and coastal cruises. Our team grew to 25 passionate local guides, each an expert in their region.' },
-                { year: '2020', text: 'Launched luxury and bespoke itinerary services, welcoming guests from over 40 countries. Recognised by the Omani Tourism Authority for sustainable practices.' },
+                { year: '2020', text: 'Launched luxury and bespoke itinerary services, welcoming guests from over 40 countries. Recognised by the  Ministry of Heritage and Tourism for sustainable practices.'},
                 { year: 'Today', text: 'Over 50,000 travellers have trusted us with their most treasured memories. We remain a family business — guided by the same values that started it all.' },
               ].map((item, i) => (
                 <div
