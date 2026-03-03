@@ -128,7 +128,7 @@ const serviceData: Record<string, ServiceData> = {
   'luxury-tour': {
     title: 'Luxury Tour',
     subtitle: '5-Star Premium Experience',
-    hero: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&q=80',
+    hero: '/AlilaExperiences.webp',
     description: 'This exclusive tour invites guests to discover the breathtaking beauty of Oman through a thoughtfully curated journey that balances leisure, light adventure, and authentic hospitality. Designed for travelers who seek relaxation and memorable experiences with luxurious 5-star accommodations throughout.',
     features: [
       '5-star hotel accommodations',
@@ -147,9 +147,9 @@ const serviceData: Record<string, ServiceData> = {
     groupSize: '2-6 People',
     includes: ['5-star hotels', 'All meals', 'Private guide', 'Luxury transfers', 'Spa treatments'],
     gallery: [
-      'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80',
-      'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80',
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80'
+      '/AlilaExperiences.webp',
+      '/luxuryExp/luxury1.webp',
+      '/luxuryExp/luxury2.jpg'
     ]
   },
   'adventure-tour': {

@@ -51,17 +51,17 @@ const destinations: Record<string, DestinationData> = {
       {
         title: 'Old Muscat & Mutrah Heritage Walk',
         description: 'Wander through the ancient lanes of Old Muscat, past the whitewashed Al Alam Palace and centuries-old Portuguese forts before descending into the aromatic maze of Mutrah Souq. A living museum where traders still exchange frankincense resin by weight.',
-        image: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=900&q=80',
+        image: '/destinations/Muscat5.webp',
       },
       {
         title: 'Royal Opera House Evening',
         description: 'An architectural jewel of the Gulf, the Royal Opera House hosts world-class performances in an exquisitely crafted Moorish setting. Arrive early to stroll the manicured gardens and take in the illuminated facade before the curtain rises.',
-        image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=80',
+        image: '/destinations/Muscat3.jpeg',
       },
       {
         title: 'Coastal Sunset Cruise',
         description: 'Board a traditional dhow and sail along Muscat\'s dramatic coastline as the sun descends behind the mountains. Dolphins frequently escort the vessel while the city\'s white skyline glows gold — one of Oman\'s most unforgettable moments.',
-        image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&q=80',
+        image: '/destinations/Muscat6.jpg',
       },
     ],
     gallery: [
@@ -93,22 +93,22 @@ const destinations: Record<string, DestinationData> = {
       {
         title: 'Dune Bashing & Sunset Drive',
         description: 'Strap in as a skilled local driver navigates the dramatic crests and valleys of the Wahiba dunes in a powerful 4x4. The heart-stopping descents and sweeping ridge drives culminate at a high dune point just in time for sunset — nature\'s most spectacular show in the Arabian desert.',
-        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80',
+        image: '/destinations/wahiba5.jpeg',
       },
       {
         title: 'Authentic Bedouin Camp Experience',
         description: 'Spend a night in a traditional Bedouin-style camp deep within the sands. Share slow-brewed Omani coffee and dates, listen to desert stories, enjoy a stargazing session with minimal light pollution, and drift to sleep with the sound of nothing but wind over dunes.',
-        image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80',
+        image: '/destinations/wahiba3.jpeg',
       },
       {
         title: 'Camel Trek at Dawn',
         description: 'The oldest form of desert travel remains the most soulful. At first light, mount a camel and sway gently through the cool morning sands as the sun climbs and the world slowly warms around you. This is the Wahiba Sands at its most timeless.',
-        image: 'https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=900&q=80',
+        image: '/destinations/wahiba2.jpeg',
       },
     ],
     gallery: [
-      '/destinations/wahiba1.jpeg',
       '/destinations/wahiba2.jpeg',
+      '/destinations/wahiba1.jpeg',
       '/destinations/wahiba3.jpeg',
       '/destinations/wahiba4.jpeg',
     ],
@@ -140,12 +140,12 @@ const destinations: Record<string, DestinationData> = {
       {
         title: 'Friday Goat Market at Dawn',
         description: 'Arrive early to witness one of Arabia\'s oldest rituals: a livestock auction conducted entirely in the traditional way, with men in dishdashas haggling over goats and cattle as the morning mist lifts over the date palms. A photographer\'s dream and a historian\'s delight.',
-        image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=80',
+        image: '/destinations/nizwa5.webp',
       },
       {
         title: 'Al Hamra & Misfat Village Walk',
         description: 'Explore the abandoned multi-storey mud-brick architecture of Al Hamra — frozen in time for over four centuries — before continuing to Misfat Al Abriyeen, a living village where cool falaj irrigation channels flow through terraced gardens of bananas, figs, and pomegranates.',
-        image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&q=80',
+        image: '/destinations/nizwa6.jpg',
       },
     ],
     gallery: [
@@ -177,17 +177,17 @@ const destinations: Record<string, DestinationData> = {
       {
         title: 'Khareef Waterfall & Green Mountain Drive',
         description: 'During the monsoon months of June to September, the Dhofar escarpment becomes a different world entirely. Drive through cloud forests, stop at Ayn Khor and Darbat waterfalls, and witness the extraordinary spectacle of Arabia in full tropical bloom — a phenomenon found nowhere else in the region.',
-        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80',
+        image: '/destinations/Salalah1.jpeg',
       },
       {
         title: 'Frankincense Trail & Ancient Ports',
         description: 'Follow the UNESCO-listed frankincense trail through the ancient ports of Sumhuram and Khor Rori — once among the wealthiest trading cities on earth. The air here still carries the scent of the same resin that was worth more than gold in antiquity, harvested from wild Boswellia trees on the surrounding hills.',
-        image: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=900&q=80',
+        image: '/destinations/Salalah3.jpeg',
       },
       {
         title: 'Al Mughsail Beach & Blowholes',
         description: 'A dramatic stretch of undeveloped coastline where limestone arches and sea caves punctuate a long white beach. Walk the headland path above the blowholes and feel the earth shudder as waves drive columns of spray skyward — one of Oman\'s most visceral natural spectacles.',
-        image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&q=80',
+        image: '/destinations/Salalah5.jpg',
       },
     ],
     gallery: [
@@ -219,17 +219,17 @@ const destinations: Record<string, DestinationData> = {
       {
         title: 'Rose Harvest & Village Life',
         description: 'Each spring (March to May), the terraced villages of Ash Sharayjah and Al Ayn fill with the scent of damask roses harvested at dawn before the heat destroys the petals. Walk the ancient stone terraces with local farmers and learn how rose water — Oman\'s most prized export — has been distilled by hand for over a thousand years.',
-        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80',
+        image: '/destinations/Jebelakhdar4.jpg',
       },
       {
         title: 'Wadi Bani Habib Village Exploration',
         description: 'Pick your way through the haunting abandoned ruins of Wadi Bani Habib — a once-thriving village of multi-storey stone houses now standing empty on a clifftop ledge. A few families have returned, making it a rare encounter between past and present, ruin and renewal.',
-        image: 'https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=900&q=80',
+        image: '/destinations/Jebelakhdar3.jpeg',
       },
       {
         title: 'Jebel Shams Balcony Walk',
         description: 'The Balcony Walk is one of Oman\'s most celebrated hikes — a path that winds along the sheer rim of Wadi Ghul with views plunging over a kilometre to the canyon floor. The scale is staggering, the light extraordinary, and the silence of the high mountain complete.',
-        image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80',
+        image: '/destinations/Jebelakhdar2.jpeg',
       },
     ],
     gallery: [
@@ -261,17 +261,17 @@ const destinations: Record<string, DestinationData> = {
       {
         title: 'Traditional Dhow Yard Visit',
         description: 'Step into a living piece of history at Sur\'s active dhow building yard, where master craftsmen shape vast planks of teak by hand using traditional adzes, caulking mallets, and centuries of inherited knowledge. The vessels they build — some over 30 metres in length — are still commissioned by Gulf navies and collectors worldwide.',
-        image: 'https://images.unsplash.com/photo-1520454974749-611b7248ffdb?w=900&q=80',
+        image: '/destinations/sur5.webp',
       },
       {
         title: 'Ras Al Jinz Turtle Nesting Night',
         description: 'In the dark hours before and after midnight, green sea turtles weighing up to 200kg haul themselves from the sea to excavate nests in the sand. Guided by reserve rangers in total darkness, you stand metres away from a creature that has made this journey for 100 million years — a privilege beyond words.',
-        image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&q=80',
+        image: '/destinations/sur6.jpg',
       },
       {
         title: 'Sur Lagoon & Blue Lagoon Kayak',
         description: 'Paddle across the glassy surface of Sur\'s tidal lagoon at dawn, where flamingos wade in the shallows and traditional wooden boats lie at anchor. Continue by road to the Blue Lagoon — a hidden inlet of extraordinarily clear turquoise water where the sea floor is visible at ten metres depth.',
-        image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=80',
+        image: '/destinations/sur7.jpg',
       },
     ],
     gallery: [

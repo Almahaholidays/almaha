@@ -618,52 +618,66 @@ const EventDetail: React.FC = () => {
       {/* ══════════════════════════════
           CTA SECTION
       ══════════════════════════════ */}
-      <section className="relative py-40 overflow-hidden">
-        {/* Animated Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#e3261d] via-[#c01f18] to-[#e3261d]">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 1px, transparent 1px)',
-              backgroundSize: '50px 50px',
-              transform: `translateY(${scrollY * 0.1}px)`
-            }}
-          />
-        </div>
+<section className="relative py-40 overflow-hidden bg-primary-dark">
+  {/* Subtle Gradient Background (same style as CTASection) */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent">
+    <div
+      className="absolute inset-0"
+      style={{
+        backgroundImage:
+          'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.08) 1px, transparent 1px)',
+        backgroundSize: '50px 50px',
+        transform: `translateY(${scrollY * 0.1}px)`
+      }}
+    />
+  </div>
 
-        {/* Floating Shapes */}
-        <div
-          className="absolute top-20 right-20 w-32 h-32 border-4 border-white/20 rounded-2xl"
-          style={{
-            transform: `rotate(${scrollY * 0.05}deg) translateY(${scrollY * 0.2}px)`
-          }}
-        />
-        <div
-          className="absolute bottom-20 left-20 w-24 h-24 border-4 border-white/20 rounded-full"
-          style={{
-            transform: `translateY(${-scrollY * 0.15}px)`
-          }}
-        />
+  {/* Floating Shapes */}
+  <div
+    className="absolute top-20 right-20 w-32 h-32 border-4 border-white/20 rounded-2xl"
+    style={{
+      transform: `rotate(${scrollY * 0.05}deg) translateY(${scrollY * 0.2}px)`
+    }}
+  />
+  <div
+    className="absolute bottom-20 left-20 w-24 h-24 border-4 border-white/20 rounded-full"
+    style={{
+      transform: `translateY(${-scrollY * 0.15}px)`
+    }}
+  />
 
-        <div className="container mx-auto px-6 relative z-10">
-          <AnimatedSection className="text-center">
-            <h2 className="font-display text-6xl md:text-8xl font-black leading-tight mb-8 bg-gradient-to-r from-white via-white to-[#4e3779] bg-clip-text text-transparent">
-              Ready to Begin?
-            </h2>
-            <p className="text-2xl text-white/90 max-w-2xl mx-auto mb-12">
-              Let's create an unforgettable {event.title} experience together
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="px-12 py-5 bg-white text-[#4e3779] font-black rounded-full hover:bg-neutral-100 transition-all duration-300 shadow-2xl hover:scale-105 text-lg"
-              >
-                Get Started
-              </Link>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+  <div className="container mx-auto px-6 relative z-10">
+    <AnimatedSection className="text-center">
+      
+      {/* Heading */}
+      <h2 className="font-display text-6xl md:text-8xl font-black leading-tight mb-8 text-white">
+        Ready to Begin?
+      </h2>
+
+      {/* Description */}
+      <p className="text-2xl text-white/60 max-w-2xl mx-auto mb-12">
+        Let's create an unforgettable {event.title} experience together
+      </p>
+
+      {/* Button */}
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <Link
+          to="/contact"
+          className="group inline-flex items-center justify-center
+          bg-[#e3261d] text-white font-bold
+          px-12 py-5 rounded-full
+          hover:bg-[#c01f18]
+          transition-all duration-300
+          shadow-lg shadow-[#e3261d]/20
+          hover:scale-105 text-lg"
+        >
+          Get Started
+        </Link>
+      </div>
+
+    </AnimatedSection>
+  </div>
+</section>
 
       {/* ══════════════════════════════
           LIGHTBOX MODAL

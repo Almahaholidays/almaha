@@ -163,7 +163,7 @@ const OurStory: React.FC = () => {
             <div className="space-y-0">
               {[
                 { year: '1999', text: 'Founded in Muscat with a single jeep and a profound belief that Oman\'s wonders deserved to be shared with the world. Our first guests were three adventurous travellers from Germany.' },
-                { year: '2015', text: 'Expanded into cultural heritage tours, deep-desert expeditions, and coastal cruises. Our team grew to 25 passionate local guides, each an expert in their region.' },
+                { year: '2010', text: 'Expanded into cultural heritage tours, deep-desert expeditions, and coastal cruises. Our team grew to 25 passionate local guides, each an expert in their region.' },
                 { year: '2020', text: 'Launched luxury and bespoke itinerary services, welcoming guests from over 40 countries. Recognised by the  Ministry of Heritage and Tourism for sustainable practices.'},
                 { year: 'Today', text: 'Over 50,000 travellers have trusted us with their most treasured memories. We remain a family business — guided by the same values that started it all.' },
               ].map((item, i) => (
@@ -192,7 +192,7 @@ const OurStory: React.FC = () => {
 
               <div className="relative z-10 rounded-2xl overflow-hidden aspect-[4/5] shadow-[0_30px_70px_rgba(0,0,0,0.14)]">
                 <img
-                  src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=800&q=80"
+                  src="/destinations/Muscat3.jpeg"
                   alt="Al Maha Tourism"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]"
                 />
@@ -595,11 +595,6 @@ const MeetTheTeam: React.FC = () => {
               alt="The Al Maha Tourism team"
               className="w-full h-full object-cover object-center transition-transform duration-[1400ms] ease-out group-hover:scale-[1.04]"
             />
-
-            {/* Gradient: bottom-heavy for text legibility */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10" />
-            {/* Side vignette */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50" />
 
             {/* Top red accent line */}
             <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#e3261d]/80 to-transparent" />

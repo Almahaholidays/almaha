@@ -866,7 +866,7 @@ const TrustBar: React.FC = () => {
 
           {/* Stat */}
           {[
-            { value: '500+', label: 'Happy Travellers', sub: 'Across 40+ countries' },
+            { value: '50k+', label: 'Happy Travellers', sub: 'Across 40+ countries' },
             { value: '4.9 ★', label: 'Average Rating', sub: 'Google · TripAdvisor' },
             { value: '< 24h', label: 'Response Time', sub: 'We respond fast, always' },
           ].map((s) => (

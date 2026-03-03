@@ -113,7 +113,7 @@ const DestinationsSection: React.FC = () => {
     {
       title: 'Nizwa',
       description: 'Historic forts and traditional souks in the cultural heartland of Oman.',
-      image: '/destinations/NizwaFort.jpg',
+      image: '/destinations/Nizwa2.jpeg',
       tag: 'Heritage',
       slug: 'nizwa',
     },
@@ -182,7 +182,7 @@ const DestinationsSection: React.FC = () => {
                 </div>
                 <div className="w-px h-10 bg-white/10" />
                 <div>
-                  <p className="text-white font-display text-3xl font-bold leading-none">500+</p>
+                  <p className="text-white font-display text-3xl font-bold leading-none">50k+</p>
                   <p className="text-white/25 text-[10px] tracking-[0.25em] uppercase mt-1">Happy Travellers</p>
                 </div>
               </div>
