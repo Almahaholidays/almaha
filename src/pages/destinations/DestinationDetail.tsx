@@ -121,7 +121,7 @@ const destinations: Record<string, DestinationData> = {
     bestSeason: 'Oct – Mar',
     distanceFromMuscat: '~165 km',
     toursCount: '18+',
-    heroImage: '/destinations/NizwaFort.jpg',
+    heroImage: '/destinations/Nizwa2.jpeg',
     tagline: 'The ancient cultural heartland of Oman — where forts, souqs, and traditions endure.',
     about:
       'Nizwa served as the capital of Oman for centuries and remains the country\'s cultural soul. Dominated by its monumental 17th-century round fort — the largest in Oman — the city sits in a fertile valley surrounded by date palms and mountain ranges. The Friday livestock market, where goats and cattle are traded exactly as they were a thousand years ago, is one of the most visceral and authentic experiences in the entire Arabian Peninsula.',
@@ -135,7 +135,7 @@ const destinations: Record<string, DestinationData> = {
       {
         title: 'Nizwa Fort & Old Souq Immersion',
         description: 'Climb the massive cylindrical tower of Nizwa Fort for sweeping views over the palm groves and city, then descend into the adjacent souq — one of Oman\'s most evocative markets — where the smell of frankincense mingles with silver, spices, and traditional Omani textiles.',
-        image: '/destinations/NizwaFort.jpg',
+        image: '/destinations/Nizwa2.jpeg',
       },
       {
         title: 'Friday Goat Market at Dawn',
