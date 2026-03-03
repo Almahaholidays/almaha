@@ -102,7 +102,7 @@ const ContactUsSection: React.FC = () => {
                     style={{ transition: 'border-color 0.25s' }}
                     onFocus={(e) => e.currentTarget.style.borderColor = '#e3261d'}
                     onBlur={(e) => e.currentTarget.style.borderColor = ''}
-                    placeholder="+968 7602 4816"
+                    placeholder="+968 9803 6952"
                   />
                 </div>
 
@@ -176,7 +176,7 @@ const ContactUsSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-sm text-primary-dark mb-1">Phone</h4>
-                  <p className="text-neutral-600 text-sm">+968 7602 4816</p>
+                  <p className="text-neutral-600 text-sm">+968 9803 6952</p>
                   <p className="text-neutral-600 text-sm">+968 9876 5432</p>
                 </div>
               </div>

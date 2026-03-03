@@ -2,7 +2,7 @@ import React from 'react';
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 
 const ContactSection: React.FC = () => {
-  const phoneNumber = "+968 7602 4816";
+  const phoneNumber = "+968 9803 6952";
   const email = "salessupport@almahaholidays.com";
   const website = "www.almahatourism.com";
 

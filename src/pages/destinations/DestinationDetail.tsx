@@ -65,10 +65,10 @@ const destinations: Record<string, DestinationData> = {
       },
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1601890976279-0b4ff3233938?w=900&q=80',
-      'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=900&q=80',
-      'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=900&q=80',
-      'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=80',
+      '/destinations/Muscat1.jpeg',
+      '/destinations/Muscat2.jpeg',
+      '/destinations/Muscat3.jpeg',
+      '/destinations/Muscat4.jpeg',
     ],
   },
 
@@ -107,10 +107,10 @@ const destinations: Record<string, DestinationData> = {
       },
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=900&q=80',
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80',
-      'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80',
-      'https://images.unsplash.com/photo-1520454974749-611b7248ffdb?w=900&q=80',
+      '/destinations/wahiba1.jpeg',
+      '/destinations/wahiba2.jpeg',
+      '/destinations/wahiba3.jpeg',
+      '/destinations/wahiba4.jpeg',
     ],
   },
 
@@ -149,10 +149,10 @@ const destinations: Record<string, DestinationData> = {
       },
     ],
     gallery: [
-      '/destinations/NizwaFort.jpg',
-      'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=80',
-      'https://images.unsplash.com/photo-1583309219338-c2ec0a6c3b46?w=900&q=80',
-      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&q=80',
+      '/destinations/Nizwa1.jpeg',
+      '/destinations/Nizwa2.jpeg',
+      '/destinations/Nizwa3.jpeg',
+      '/destinations/Nizwa4.jpeg',
     ],
   },
 
@@ -191,10 +191,10 @@ const destinations: Record<string, DestinationData> = {
       },
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&q=80',
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80',
-      'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=900&q=80',
-      'https://images.unsplash.com/photo-1520454974749-611b7248ffdb?w=900&q=80',
+      '/destinations/Salalah1.jpeg',
+      '/destinations/Salalah2.jpeg',
+      '/destinations/Salalah3.jpeg',
+      '/destinations/Salalah4.jpeg',
     ],
   },
 
@@ -205,7 +205,7 @@ const destinations: Record<string, DestinationData> = {
     bestSeason: 'Mar – Nov',
     distanceFromMuscat: '~150 km',
     toursCount: '15+',
-    heroImage: '/destinations/jebelAkhdar.jpg',
+    heroImage: '/destinations/Jebelakhdar.jpeg',
     tagline: 'The "Green Mountain" — rose gardens, ancient terraces, and cool air 2,000 metres above Oman.',
     about:
       'Jebel Akhdar — Arabic for "Green Mountain" — rises dramatically to over 2,000 metres on the Al Hajar range and offers a climate and landscape utterly unlike the Omani lowlands below. Ancient terraced villages cling to vertiginous cliffs, their falaj irrigation systems distributing mountain spring water to gardens of damask roses, pomegranates, apricots, and walnuts. The rose harvest each spring produces the prized Omani rose water that has graced tables and temples for centuries.',
@@ -233,10 +233,10 @@ const destinations: Record<string, DestinationData> = {
       },
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80',
-      'https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=900&q=80',
-      'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80',
-      'https://images.unsplash.com/photo-1583309219338-c2ec0a6c3b46?w=900&q=80',
+      '/destinations/Jebelakhdar.jpeg',
+      '/destinations/Jebelakhdar1.jpeg',
+      '/destinations/Jebelakhdar2.jpeg',
+      '/destinations/Jebelakhdar3.jpeg',
     ],
   },
 
@@ -275,10 +275,10 @@ const destinations: Record<string, DestinationData> = {
       },
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1520454974749-611b7248ffdb?w=900&q=80',
-      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&q=80',
-      'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=80',
-      'https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=900&q=80',
+      '/destinations/sur1.jpeg',
+      '/destinations/sur2.jpeg',
+      '/destinations/sur3.jpeg',
+      '/destinations/sur4.jpeg',
     ],
   },
 };
@@ -392,174 +392,7 @@ const HeroSection: React.FC<{ dest: DestinationData }> = ({ dest }) => (
   </section>
 );
 
-/* ─────────────────────────────────────────────
-   Section: Floating Radial Stats Dashboard
-───────────────────────────────────────────── */
-// const InfoStrip: React.FC<{ dest: DestinationData }> = ({ dest }) => {
-//   const [activeIndex, setActiveIndex] = useState<number>(0);
-//   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
-//   const stats = [
-//     {
-//       label: 'Best Season',
-//       value: dest.bestSeason,
-//       icon: '☀️',
-//       color: 'from-[#e3261d] to-[#c01f18]',
-//       detail: 'Optimal weather conditions'
-//     },
-//     {
-//       label: 'Distance',
-//       value: dest.distanceFromMuscat,
-//       icon: '🚗',
-//       color: 'from-blue-500 to-cyan-500',
-//       detail: 'From Muscat center'
-//     },
-//     {
-//       label: 'Tours',
-//       value: dest.toursCount,
-//       icon: '🎯',
-//       color: 'from-purple-500 to-pink-500',
-//       detail: 'Available experiences'
-//     },
-//   ];
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       if (!isExpanded) {
-//         setActiveIndex((prev) => (prev + 1) % stats.length);
-//       }
-//     }, 3000);
-//     return () => clearInterval(interval);
-//   }, [isExpanded, stats.length]);
-
-//   return (
-//     <section className="relative -mt-32 z-20 pb-20">
-//       <div className="container mx-auto px-6 max-w-6xl">
-//
-//         {/* Main floating card */}
-//         <div
-//           className="relative bg-gradient-to-br from-primary-dark via-primary-dark to-black rounded-3xl shadow-2xl shadow-black/50 overflow-hidden border border-white/10"
-//           onMouseEnter={() => setIsExpanded(true)}
-//           onMouseLeave={() => setIsExpanded(false)}
-//         >
-//           {/* Animated mesh gradient background */}
-//           <div className="absolute inset-0 opacity-30">
-//             <div className="absolute inset-0 bg-gradient-to-br from-[#e3261d]/20 via-transparent to-purple-500/20 animate-pulse" />
-//             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,157,0,0.1),transparent_50%)]" />
-//           </div>
-//
-//           {/* Floating orbs */}
-//           <div className="absolute top-10 right-10 w-40 h-40 rounded-full bg-[#e3261d]/10 blur-3xl animate-pulse" />
-//           <div className="absolute bottom-10 left-10 w-40 h-40 rounded-full bg-purple-500/10 blur-3xl animate-pulse delay-1000" />
-//
-//           <div className="relative z-10 p-8 md:p-12">
-//
-//             {/* Stats Grid - Morphs on hover */}
-//             <div className="grid md:grid-cols-3 gap-4">
-//               {stats.map((stat, i) => (
-//                 <div
-//                   key={stat.label}
-//                   className={`group relative transition-all duration-700 ${
-//                     isExpanded
-//                       ? 'opacity-100 translate-y-0'
-//                       : activeIndex === i
-//                       ? 'opacity-100 translate-y-0'
-//                       : 'opacity-40 translate-y-2'
-//                   }`}
-//                   style={{ transitionDelay: `${i * 100}ms` }}
-//                   onClick={() => setActiveIndex(i)}
-//                 >
-//                   {/* Card */}
-//                   <div
-//                     className={`relative overflow-hidden rounded-2xl transition-all duration-500 cursor-pointer ${
-//                       activeIndex === i
-//                         ? 'bg-white/10 backdrop-blur-xl border-2 border-[#e3261d] shadow-xl shadow-[#e3261d]/20'
-//                         : 'bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/30'
-//                     }`}
-//                   >
-//                     {/* Gradient overlay */}
-//                     <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-//
-//                     {/* Shine effect on hover */}
-//                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-//                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-//                     </div>
-//
-//                     <div className="relative p-6">
-//                       {/* Icon with rotation */}
-//                       <div className={`text-5xl mb-4 transform transition-all duration-500 ${
-//                         activeIndex === i
-//                           ? 'scale-110 rotate-12'
-//                           : 'scale-100 rotate-0'
-//                       }`}>
-//                         {stat.icon}
-//                       </div>
-//
-//                       {/* Label */}
-//                       <p className="text-white/50 text-xs font-bold tracking-wider uppercase mb-2">
-//                         {stat.label}
-//                       </p>
-//
-//                       {/* Value */}
-//                       <p className={`font-display font-black text-white leading-tight transition-all duration-300 ${
-//                         activeIndex === i ? 'text-3xl' : 'text-2xl'
-//                       }`}>
-//                         {stat.value}
-//                       </p>
-//
-//                       {/* Detail - expands on hover */}
-//                       <div className={`overflow-hidden transition-all duration-500 ${
-//                         isExpanded || activeIndex === i
-//                           ? 'max-h-20 opacity-100 mt-3'
-//                           : 'max-h-0 opacity-0 mt-0'
-//                       }`}>
-//                         <p className="text-white/60 text-sm">
-//                           {stat.detail}
-//                         </p>
-//                       </div>
-//
-//                       {/* Active indicator */}
-//                       <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${stat.color} transition-all duration-500 ${
-//                         activeIndex === i ? 'opacity-100' : 'opacity-0'
-//                       }`} />
-//                     </div>
-//                   </div>
-//
-//                   {/* Selection ring */}
-//                   <div className={`absolute -inset-1 rounded-2xl bg-gradient-to-r ${stat.color} opacity-0 blur transition-opacity duration-500 -z-10 ${
-//                     activeIndex === i ? 'opacity-20' : ''
-//                   }`} />
-//                 </div>
-//               ))}
-//             </div>
-//
-//             {/* Progress indicators */}
-//             <div className="flex justify-center gap-2 mt-8">
-//               {stats.map((_, i) => (
-//                 <button
-//                   key={i}
-//                   onClick={() => setActiveIndex(i)}
-//                   className={`transition-all duration-300 rounded-full ${
-//                     activeIndex === i
-//                       ? 'w-8 h-2 bg-[#e3261d]'
-//                       : 'w-2 h-2 bg-white/20 hover:bg-white/40'
-//                   }`}
-//                   aria-label={`View stat ${i + 1}`}
-//                 />
-//               ))}
-//             </div>
-//
-//           </div>
-//         </div>
-//
-//       </div>
-//     </section>
-//   );
-// };
-
-/* ─────────────────────────────────────────────
-   Section: About + Highlights - Parallax Split
-───────────────────────────────────────────── */
 const AboutSection: React.FC<{ dest: DestinationData }> = ({ dest }) => {
   const [scrollY, setScrollY] = useState(0);
 
@@ -830,8 +663,8 @@ const GallerySection: React.FC<{ dest: DestinationData }> = ({ dest }) => {
             </div>
           </AnimatedSection>
 
-          <AnimatedSection className="col-span-1 row-span-1 group cursor-pointer" onClick={() => setSelectedImage(3)}>
-            <div className="relative h-full rounded-3xl overflow-hidden">
+          <AnimatedSection className="col-span-1 row-span-1 group cursor-pointer">
+            <Link to="/gallery" className="relative h-full rounded-3xl overflow-hidden block">
               <img
                 src={dest.gallery[3]}
                 alt={dest.title}
@@ -843,7 +676,7 @@ const GallerySection: React.FC<{ dest: DestinationData }> = ({ dest }) => {
                   <p className="text-xs font-bold tracking-wider">MORE PHOTOS</p>
                 </div>
               </div>
-            </div>
+            </Link>
           </AnimatedSection>
         </div>
 

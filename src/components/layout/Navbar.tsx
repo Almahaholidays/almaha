@@ -288,6 +288,21 @@ export default function Navbar() {
                 </button>
               </div>
 
+              {/* Destinations Link */}
+              <Link
+                to="/destinations"
+                className={`relative px-4 py-2 rounded-full font-['Lato'] text-[0.8rem] uppercase tracking-[0.08em] transition-all duration-300 ${
+                  location.pathname === '/destinations'
+                    ? 'text-black'
+                    : 'text-black/60 hover:text-black hover:bg-black/5'
+                }`}
+              >
+                <span>Destinations</span>
+                {location.pathname === '/destinations' && (
+                  <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full" style={{ backgroundColor: '#e3261d' }} />
+                )}
+              </Link>
+
               {navItems.slice(1).map((item) => {
                 const isActive = location.pathname === item.href;
                 return (
@@ -426,14 +441,14 @@ export default function Navbar() {
 
                 <div className="space-y-4">
                   <div>
-                    <a href="tel:+96876024816" className="flex items-center gap-2 text-black/80 transition-colors"
+                    <a href="tel:+96898036952" className="flex items-center gap-2 text-black/80 transition-colors"
                       style={{ transition: 'color 0.3s' }}
                       onMouseEnter={(e) => e.currentTarget.style.color = '#e3261d'}
                       onMouseLeave={(e) => e.currentTarget.style.color = ''}>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                       </svg>
-                      <span className="font-['Lato'] text-[0.8rem]">+968 7602 4816</span>
+                      <span className="font-['Lato'] text-[0.8rem]">+968 9803 6952</span>
                     </a>
                   </div>
 
@@ -562,14 +577,14 @@ export default function Navbar() {
 
                 <div className="space-y-4">
                   <div>
-                    <a href="tel:+96876024816" className="flex items-center gap-2 text-black/80 transition-colors"
+                    <a href="tel:+96898036952" className="flex items-center gap-2 text-black/80 transition-colors"
                       style={{ transition: 'color 0.3s' }}
                       onMouseEnter={(e) => e.currentTarget.style.color = '#e3261d'}
                       onMouseLeave={(e) => e.currentTarget.style.color = ''}>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                       </svg>
-                      <span className="font-['Lato'] text-[0.8rem]">+968 7602 4816</span>
+                      <span className="font-['Lato'] text-[0.8rem]">+968 9803 6952</span>
                     </a>
                   </div>
 
@@ -661,6 +676,19 @@ export default function Navbar() {
               Our Services
             </div>
 
+            <Link
+              to="/destinations"
+              className={`block py-4 font-['Lato'] text-[2rem] font-bold tracking-[-0.02em] text-white/40 hover:text-white transition-all duration-300 border-b border-white/5`}
+              style={{
+                opacity: isMenuOpen ? 1 : 0,
+                transform: isMenuOpen ? 'translateY(0)' : 'translateY(20px)',
+                transition: `opacity 0.4s ease 0.15s, transform 0.4s ease 0.15s`,
+              }}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Destinations
+            </Link>
+
             {navItems.slice(1).map((item, index) => (
               <Link
                 key={item.label}
@@ -669,7 +697,7 @@ export default function Navbar() {
                 style={{
                   opacity: isMenuOpen ? 1 : 0,
                   transform: isMenuOpen ? 'translateY(0)' : 'translateY(20px)',
-                  transition: `opacity 0.4s ease ${(index + 3) * 0.05}s, transform 0.4s ease ${(index + 3) * 0.05}s`,
+                  transition: `opacity 0.4s ease ${(index + 4) * 0.05}s, transform 0.4s ease ${(index + 4) * 0.05}s`,
                 }}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -779,11 +807,11 @@ export default function Navbar() {
               onMouseLeave={(e) => e.currentTarget.style.color = ''}>
               salessupport@almahaholidays.com
             </a>
-            <a href="tel:+96876024816" className="block font-['Lato'] text-[0.85rem] text-white/40 transition-colors mt-2"
+            <a href="tel:+96898036952" className="block font-['Lato'] text-[0.85rem] text-white/40 transition-colors mt-2"
               style={{ transition: 'color 0.3s' }}
               onMouseEnter={(e) => e.currentTarget.style.color = '#e3261d'}
               onMouseLeave={(e) => e.currentTarget.style.color = ''}>
-              +968 7602 4816
+              +968 9803 6952
             </a>
           </div>
         </nav>

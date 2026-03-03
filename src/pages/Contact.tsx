@@ -4,7 +4,7 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 /* ─────────────────────────────────────────────
    Constants
 ───────────────────────────────────────────── */
-const PHONE   = '+968 7602 4816';
+const PHONE   = '+968 9803 6952';
 const EMAIL   = 'salessupport@almahaholidays.com';
 
 const tourTypes = [

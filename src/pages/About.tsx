@@ -162,7 +162,7 @@ const OurStory: React.FC = () => {
             {/* Timeline narrative */}
             <div className="space-y-0">
               {[
-                { year: '2010', text: 'Founded in Muscat with a single jeep and a profound belief that Oman\'s wonders deserved to be shared with the world. Our first guests were three adventurous travellers from Germany.' },
+                { year: '1999', text: 'Founded in Muscat with a single jeep and a profound belief that Oman\'s wonders deserved to be shared with the world. Our first guests were three adventurous travellers from Germany.' },
                 { year: '2015', text: 'Expanded into cultural heritage tours, deep-desert expeditions, and coastal cruises. Our team grew to 25 passionate local guides, each an expert in their region.' },
                 { year: '2020', text: 'Launched luxury and bespoke itinerary services, welcoming guests from over 40 countries. Recognised by the  Ministry of Heritage and Tourism for sustainable practices.'},
                 { year: 'Today', text: 'Over 50,000 travellers have trusted us with their most treasured memories. We remain a family business — guided by the same values that started it all.' },
@@ -200,7 +200,7 @@ const OurStory: React.FC = () => {
 
                 {/* Overlay badge */}
                 <div className="absolute bottom-0 left-0 right-0 p-7">
-                  <p className="text-white/40 text-[10px] tracking-[0.3em] uppercase font-medium mb-2">Est. 2010 · Muscat, Oman</p>
+                  <p className="text-white/40 text-[10px] tracking-[0.3em] uppercase font-medium mb-2">Est. 1999 · Muscat, Oman</p>
                   <div className="flex items-end gap-2.5">
                     <span className="font-display text-4xl font-bold text-white leading-none">50K+</span>
                     <span className="text-white/55 text-sm mb-0.5">Happy Travellers</span>
