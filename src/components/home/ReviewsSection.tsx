@@ -87,7 +87,7 @@ const ReviewsSection: React.FC = () => {
             </h2>
 
             <p className="text-neutral-500 text-lg leading-relaxed max-w-xl">
-              Over 500 travellers have trusted Al Maha to craft their perfect Omani journey.
+              Over 50k travellers have trusted Al Maha to craft their perfect Omani journey.
               Here's what they have to say.
             </p>
           </div>
@@ -113,7 +113,7 @@ const ReviewsSection: React.FC = () => {
             {/* Stats row */}
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div>
-                <p className="text-white font-display text-2xl font-bold leading-none">500+</p>
+                <p className="text-white font-display text-2xl font-bold leading-none">50k+</p>
                 <p className="text-white/30 text-[10px] tracking-[0.2em] uppercase mt-1">Happy Travellers</p>
               </div>
               <div>

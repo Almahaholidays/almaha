@@ -798,20 +798,45 @@ const ServiceDetail: React.FC = () => {
 
               {/* Two stacked smaller images */}
               <div className="flex flex-col gap-4 md:gap-5">
-                {service.gallery.slice(1).map((img, i) => (
-                  <div key={i} className="group relative overflow-hidden rounded-2xl flex-1 min-h-[200px]">
-                    <img
-                      src={img}
-                      alt={`${service.title} ${i + 2}`}
-                      className="w-full h-full object-cover group-hover:scale-[1.06] transition-transform duration-700 ease-out"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-500">
-                      <p className="font-bold text-sm leading-tight">{service.title}</p>
-                      <p className="text-white/60 text-xs mt-0.5">Photo {String(i + 2).padStart(2, '0')}</p>
+                {service.gallery.slice(1).map((img, i) => {
+                  const isLastImage = i === service.gallery.slice(1).length - 1;
+
+                  if (isLastImage) {
+                    return (
+                      <Link to="/gallery" key={i} className="group relative overflow-hidden rounded-2xl flex-1 min-h-[200px] cursor-pointer">
+                        <img
+                          src={img}
+                          alt={`${service.title} ${i + 2}`}
+                          className="w-full h-full object-cover group-hover:scale-[1.06] transition-transform duration-700 ease-out"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/60 transition-colors duration-500">
+                          <div className="text-center text-white">
+                            <svg className="w-12 h-12 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            <p className="text-sm font-bold tracking-wider mb-1">VIEW MORE</p>
+                            <p className="text-xs text-white/60">Full Gallery</p>
+                          </div>
+                        </div>
+                      </Link>
+                    );
+                  }
+
+                  return (
+                    <div key={i} className="group relative overflow-hidden rounded-2xl flex-1 min-h-[200px]">
+                      <img
+                        src={img}
+                        alt={`${service.title} ${i + 2}`}
+                        className="w-full h-full object-cover group-hover:scale-[1.06] transition-transform duration-700 ease-out"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-500">
+                        <p className="font-bold text-sm leading-tight">{service.title}</p>
+                        <p className="text-white/60 text-xs mt-0.5">Photo {String(i + 2).padStart(2, '0')}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
 
             </div>

@@ -127,7 +127,7 @@ const DestinationsSection: React.FC = () => {
     {
       title: 'Jebel Akhdar',
       description: 'Terraced rose gardens and cool mountain retreats high above the Omani plains.',
-      image: '/destinations/jebelAkhdar.jpg',
+      image: '/destinations/Jebelakhdar.jpeg',
       tag: 'Mountains',
       slug: 'jebel-akhdar',
     },
