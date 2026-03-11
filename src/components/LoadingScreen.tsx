@@ -6,121 +6,182 @@ interface LoadingScreenProps {
 
 const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
   const [isExiting, setIsExiting] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Start exit animation after 2.5 seconds
+    const progressInterval = setInterval(() => {
+      setProgress(prev => {
+        if (prev >= 100) {
+          clearInterval(progressInterval);
+          return 100;
+        }
+        return prev + 2;
+      });
+    }, 50);
+
     const exitTimer = setTimeout(() => {
       setIsExiting(true);
     }, 2500);
 
-    // Complete animation after fade out
     const completeTimer = setTimeout(() => {
       onLoadingComplete();
     }, 3200);
 
     return () => {
+      clearInterval(progressInterval);
       clearTimeout(exitTimer);
       clearTimeout(completeTimer);
     };
   }, [onLoadingComplete]);
 
-  return (
-    <div className={`fixed inset-0 z-[9999] bg-white overflow-hidden transition-all duration-700 ${isExiting ? 'opacity-0' : 'opacity-100'}`}>
-      {/* Subtle gradient background with brand colors */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-neutral-50 to-[#e3261d]/5"></div>
+  const r = 100;
+  const circumference = 2 * Math.PI * r;
+  const angle = -90 + (progress / 100) * 360;
+  const angleRad = (angle * Math.PI) / 180;
+  const planeX = 110 + r * Math.cos(angleRad);
+  const planeY = 110 + r * Math.sin(angleRad);
+  const planeRotation = angle - 180;
 
-      {/* Animated decorative circles */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#e3261d]/5 rounded-full blur-3xl animate-pulse-gentle"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-[#e3261d]/10 rounded-full animate-rotate-slow"></div>
+  return (
+    <div
+      className={`fixed inset-0 z-[9999] overflow-hidden transition-all duration-700 ease-in-out ${
+        isExiting ? 'opacity-0 scale-105' : 'opacity-100 scale-100'
+      }`}
+      style={{ background: 'linear-gradient(135deg, #0d091f 0%, #1a1530 55%, #0a0a0a 100%)' }}
+    >
+      {/* Ambient glow behind logo */}
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle, rgba(227,38,29,0.14) 0%, rgba(78,55,121,0.09) 45%, transparent 70%)',
+          filter: 'blur(40px)',
+        }}
+      />
+
+      {/* Subtle halo glow */}
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full pointer-events-none animate-pulse-gentle"
+        style={{
+          background: 'radial-gradient(circle, rgba(227,38,29,0.08) 0%, transparent 70%)',
+          filter: 'blur(16px)',
+        }}
+      />
 
       {/* Floating particles */}
-      <div className="absolute inset-0">
-        {[...Array(6)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1.5 h-1.5 bg-[#e3261d]/20 rounded-full animate-float-gentle"
-            style={{
-              left: `${20 + i * 12}%`,
-              top: `${25 + (i % 3) * 20}%`,
-              animationDelay: `${i * 0.4}s`,
-              animationDuration: `${5 + (i % 2)}s`,
-            }}
-          />
-        ))}
-      </div>
+      {[...Array(5)].map((_, i) => (
+        <div
+          key={i}
+          className="absolute rounded-full animate-float-gentle pointer-events-none"
+          style={{
+            width: `${3 + (i % 2)}px`,
+            height: `${3 + (i % 2)}px`,
+            background: i % 2 === 0 ? 'rgba(227,38,29,0.25)' : 'rgba(78,55,121,0.3)',
+            left: `${15 + i * 16}%`,
+            top: `${20 + (i % 3) * 22}%`,
+            animationDelay: `${i * 0.5}s`,
+            animationDuration: `${6 + i}s`,
+          }}
+        />
+      ))}
 
-      {/* Decorative corner elements */}
-      <div className="absolute top-8 left-8 opacity-0 animate-corner-tl">
-        <div className="w-16 h-16 border-l-2 border-t-2 border-[#e3261d]/30 rounded-tl-lg"></div>
-      </div>
-      <div className="absolute top-8 right-8 opacity-0 animate-corner-tr">
-        <div className="w-16 h-16 border-r-2 border-t-2 border-[#e3261d]/30 rounded-tr-lg"></div>
-      </div>
-      <div className="absolute bottom-8 left-8 opacity-0 animate-corner-bl">
-        <div className="w-16 h-16 border-l-2 border-b-2 border-[#e3261d]/30 rounded-bl-lg"></div>
-      </div>
-      <div className="absolute bottom-8 right-8 opacity-0 animate-corner-br">
-        <div className="w-16 h-16 border-r-2 border-b-2 border-[#e3261d]/30 rounded-br-lg"></div>
-      </div>
+      {/* Main content */}
+      <div className="relative h-full flex flex-col items-center justify-center">
 
-      {/* Main Content */}
-      <div className="relative h-full flex items-center justify-center">
-        <div className="text-center relative">
-          {/* Background decorative elements */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] pointer-events-none">
-            {/* Left ornament */}
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 opacity-0 animate-side-ornament-left">
-              <div className="flex items-center space-x-2">
-                <div className="w-12 h-px bg-[#e3261d]/30"></div>
-                <div className="w-2 h-2 bg-[#e3261d]/40 rounded-full"></div>
-              </div>
-            </div>
+        {/* Logo with circular flight path orbiting around it */}
+        <div
+          className="relative animate-blur-in opacity-0 mb-8 flex items-center justify-center"
+          style={{ width: '220px', height: '220px' }}
+        >
+          <svg
+            className="absolute inset-0"
+            width="220"
+            height="220"
+            viewBox="0 0 220 220"
+          >
+            <defs>
+              <linearGradient id="arcGrad" gradientUnits="userSpaceOnUse" x1="110" y1="10" x2="210" y2="110">
+                <stop offset="0%" stopColor="#4e3779" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="#e3261d" />
+              </linearGradient>
+              <filter id="planeGlow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="2" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
 
-            {/* Right ornament */}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-0 animate-side-ornament-right">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-[#e3261d]/40 rounded-full"></div>
-                <div className="w-12 h-px bg-[#e3261d]/30"></div>
-              </div>
-            </div>
-          </div>
-
-          {/* Logo Image */}
-          <div className="mb-8 animate-slide-up opacity-0 relative z-10 flex justify-center">
-            <img
-              src={`${import.meta.env.BASE_URL}almaha_logo1.png`}
-              alt="Al Maha Tourism"
-              className="h-24 md:h-32 object-contain animate-logo-scale"
+            {/* Dashed background orbit track */}
+            <circle
+              cx="110" cy="110" r={r}
+              fill="none"
+              stroke="rgba(255,255,255,0.07)"
+              strokeWidth="1"
+              strokeDasharray="2 6"
             />
-          </div>
 
-          {/* Animated divider line */}
-          <div className="flex justify-center mb-6">
-            <div className="h-0.5 w-0 bg-[#e3261d] rounded-full animate-line-grow"></div>
-          </div>
+            {/* Filled progress arc */}
+            <circle
+              cx="110" cy="110" r={r}
+              fill="none"
+              stroke="url(#arcGrad)"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeDasharray={circumference}
+              strokeDashoffset={circumference * (1 - progress / 100)}
+              transform="rotate(-90 110 110)"
+              style={{ transition: 'stroke-dashoffset 0.1s linear' }}
+            />
 
-          {/* Tagline */}
-          <div className="animate-fade-delayed opacity-0 relative z-10">
-            <p className="text-neutral-500 text-sm md:text-base italic tracking-wide">
-              Discover the Extraordinary
-            </p>
-          </div>
+            {/* Plane orbiting along the arc */}
+            <g
+              transform={`translate(${planeX}, ${planeY}) rotate(${planeRotation})`}
+              filter="url(#planeGlow)"
+            >
+              <path d="M0,-5.5 L3.5,5.5 L0,3.5 L-3.5,5.5 Z" fill="#FF9D00" />
+            </g>
+          </svg>
 
-          {/* Loading animation */}
-          <div className="mt-12 flex justify-center opacity-0 animate-icon-appear">
-            <div className="flex gap-1.5">
-              {[...Array(3)].map((_, i) => (
-                <div
-                  key={i}
-                  className="w-2 h-2 bg-[#e3261d] rounded-full animate-bounce-dots"
-                  style={{
-                    animationDelay: `${i * 0.15}s`,
-                  }}
-                />
-              ))}
-            </div>
-          </div>
+          {/* Logo centered inside the orbit */}
+          <img
+            src={`${import.meta.env.BASE_URL}almaha_logo1.png`}
+            alt="Al Maha Tourism"
+            className="h-12 md:h-16 object-contain relative z-10"
+            style={{ filter: 'brightness(1.05)' }}
+          />
         </div>
+
+        {/* Gradient divider */}
+        <div
+          className="h-px w-0 rounded-full animate-line-grow mb-7"
+          style={{ background: 'linear-gradient(90deg, #4e3779, #e3261d, #FF9D00)' }}
+        />
+
+        {/* Tagline */}
+        <div className="animate-fade-delayed opacity-0 mb-10">
+          <p
+            className="text-xs md:text-sm tracking-[0.35em] uppercase font-light"
+            style={{
+              background: 'linear-gradient(90deg, #FF9D00 0%, #e3261d 50%, #a78bdb 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}
+          >
+            Discover the Extraordinary
+          </p>
+        </div>
+
+        {/* Status text */}
+        <div className="animate-icon-appear opacity-0">
+          <p
+            className="text-[10px] tracking-[0.25em] uppercase transition-all duration-500"
+            style={{ color: 'rgba(255,255,255,0.2)' }}
+          >
+            {progress < 100 ? 'En Route' : 'Arrived'}
+          </p>
+        </div>
+
       </div>
     </div>
   );

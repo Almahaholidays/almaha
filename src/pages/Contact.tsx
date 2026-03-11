@@ -573,10 +573,9 @@ ${message}
 This enquiry was submitted via the Al Maha Tourism contact form.
     `.trim();
 
-    // Create mailto link
+    // Open default mail app (works on all devices — opens Gmail app on mobile, Gmail/Outlook on desktop)
     const mailtoLink = `mailto:${EMAIL}?subject=${encodeURIComponent('New Contact Form Submission - ' + name)}&body=${encodeURIComponent(emailBody)}`;
 
-    // Open email client
     window.location.href = mailtoLink;
 
     // Show success message
@@ -785,7 +784,7 @@ const ContactSidebar: React.FC = () => {
 
             {/* WhatsApp */}
             <a
-              href={`https://wa.me/${PHONE.replace(/\s+/g, '')}`}
+              href={`https://wa.me/${PHONE.replace(/\D/g, '')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3 py-5 hover:pl-2 transition-all duration-300"

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 /* ─────────────────────────── DATA ─────────────────────────── */
@@ -487,23 +488,23 @@ const Gallery: React.FC = () => {
             </h2>
           </div>
           <div className="flex items-center gap-4 flex-shrink-0">
-            <a
-              href="/destinations"
+            <Link
+              to="/destinations"
               className="group inline-flex items-center gap-4 border border-white/15 px-7 py-4 hover:border-[#e3261d]/50 hover:bg-[#e3261d]/5 transition-all duration-300"
             >
               <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/60 group-hover:text-white transition-colors duration-300">
                 Explore Destinations
               </span>
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="group inline-flex items-center gap-3 bg-[#e3261d] px-7 py-4 text-white font-bold text-[10px] tracking-[0.2em] uppercase hover:bg-[#c01f18] transition-colors duration-300"
             >
               Plan Your Trip
               <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
