@@ -34,7 +34,7 @@ const destinations = [
     highlights: '18+ Tours',
     bestFor: 'Forts, Souqs, Old Villages',
     description: 'Historic forts and traditional souks in the cultural heartland of Oman.',
-    image: '/destinations/Nizwa2.jpeg',
+    image: '/destinations/nizwaImg/Nizwa2.jpeg',
   },
   {
     slug: 'salalah',
@@ -54,7 +54,7 @@ const destinations = [
     highlights: '15+ Tours',
     bestFor: 'Rose Gardens, Trekking, Wadis',
     description: 'Terraced rose gardens and cool mountain retreats high above the Omani plains.',
-    image: '/destinations/Jebelakhdar.jpeg',
+    image: '/destinations/jebelakhdarImg/Jebelakhdar.jpeg',
   },
   {
     slug: 'sur',

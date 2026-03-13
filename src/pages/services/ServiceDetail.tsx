@@ -40,14 +40,14 @@ const serviceData: Record<string, ServiceData> = {
     includes: ['Expert guides', 'Camping gear', 'All meals', '4x4 transfers', 'Permits'],
     gallery: [
       'https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80',
-      '/trekkingExp/trekkExp1.jpeg',
-      '/trekkingExp/trekkExp2.jpeg'
+      'experiencesImg/trekkingExp/trekkExp1.jpeg',
+      'experiencesImg/trekkingExp/trekkExp2.jpeg'
     ]
   },
   'canyoning-caving': {
     title: 'Canyoning & Caving',
     subtitle: 'Extreme Adventure Exploration',
-    hero: 'cannyoning.jpg',
+    hero: '/experiencesImg/canyonningExp/cannyoning1.jpg',
     description: 'Dive into adventure with a thrilling 1-day canyoning and caving experience. Explore hidden caves, rappel down waterfalls, and navigate through narrow gorges. Perfect for adrenaline seekers, this guided tour showcases Oman\'s wild side in a safe and unforgettable way.',
     features: [
       'Professional safety equipment',
@@ -66,15 +66,15 @@ const serviceData: Record<string, ServiceData> = {
     groupSize: '4-8 People',
     includes: ['Safety equipment', 'Expert guides', 'Lunch & water', 'Transportation', 'Insurance'],
     gallery: [
-      'canyonningExp/canyonning.jpeg',
-      'canyonningExp/canyonning1.jpeg',
-      'cannyoning.jpg'
+      'experiencesImg/canyonningExp/canyonning4.jpeg',
+      'experiencesImg/canyonningExp/canyonning3.jpeg',
+      '/experiencesImg/canyonningExp/cannyoning1.jpg'
     ]
   },
   'culture-tour': {
     title: 'Culture Tour',
     subtitle: 'Heritage & Traditions',
-    hero: '/culture.jpeg',
+    hero: '/experiencesImg/cultureExp/culture.jpeg',
     description: 'Immerse yourself in Oman\'s rich heritage with a 1-day culture tour. Visit historic forts, traditional markets, and ancient villages, guided by local experts. Discover the stories, architecture, and traditions that define Omani culture all in a single unforgettable day.',
     features: [
       'UNESCO World Heritage sites',
@@ -93,15 +93,15 @@ const serviceData: Record<string, ServiceData> = {
     groupSize: '2-15 People',
     includes: ['Cultural guide', 'Entrance fees', 'Traditional lunch', 'Transportation', 'Water'],
     gallery: [
-      '/cultureExp/camelCulture.jpg',
-      '/culture.jpeg',
-      '/cultureExp/traditionalSouq.jpg',
+      'experiencesImg/cultureExp/camelCulture.jpg',
+      '/experiencesImg/cultureExp/culture.jpeg',
+      'experiencesImg/cultureExp/traditionalSouq.jpg',
     ]
   },
   'car-rental': {
     title: 'Car Rental',
     subtitle: 'Flexible Mobility Solutions',
-    hero: '/carAboutUs.jpeg',
+    hero: 'experiencesImg/carExp/carRental2.jpeg',
     description: 'We offer reliable car rental services with a range of vehicles including compact cars, SUVs, and 4x4s – perfect for exploring Oman at your own pace. All vehicles are well-maintained and available with optional insurance, GPS, and 24/7 support.',
     features: [
       'Wide range of vehicles',
@@ -120,15 +120,15 @@ const serviceData: Record<string, ServiceData> = {
     groupSize: 'Any',
     includes: ['Full tank', 'Insurance options', 'GPS available', '24/7 support', 'Delivery service'],
     gallery: [
-      '/carAboutUs.jpeg',
-      '/carExp/carRental.jpeg',
+      'experiencesImg/carExp/carRental2.jpeg',
+      'experiencesImg/carExp/carRental1.jpeg',
       'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=80'
     ]
   },
   'luxury-tour': {
     title: 'Luxury Tour',
     subtitle: '5-Star Premium Experience',
-    hero: '/AlilaExperiences.webp',
+    hero: 'experiencesImg/luxuryExp/luxury3.webp',
     description: 'This exclusive tour invites guests to discover the breathtaking beauty of Oman through a thoughtfully curated journey that balances leisure, light adventure, and authentic hospitality. Designed for travelers who seek relaxation and memorable experiences with luxurious 5-star accommodations throughout.',
     features: [
       '5-star hotel accommodations',
@@ -147,15 +147,15 @@ const serviceData: Record<string, ServiceData> = {
     groupSize: '2-6 People',
     includes: ['5-star hotels', 'All meals', 'Private guide', 'Luxury transfers', 'Spa treatments'],
     gallery: [
-      '/AlilaExperiences.webp',
-      '/luxuryExp/luxury1.webp',
-      '/luxuryExp/luxury2.jpg'
+      'experiencesImg/luxuryExp/luxury3.webp',
+      'experiencesImg/luxuryExp/luxury1.webp',
+      'experiencesImg/luxuryExp/luxury2.jpg'
     ]
   },
   'adventure-tour': {
     title: 'Adventure Tour',
     subtitle: 'Thrilling Multi-Activity Experience',
-    hero: '/adventureExperiences.jpeg',
+    hero: 'experiencesImg/adventureExp/adventureExp4.jpeg',
     description: 'We specialize in providing unique and thrilling adventure experiences for people of all ages. With multiple facilities across Oman, we offer both adventure and city tours with mountain climbing, guided tours, first climbing gym in Oman, and professional equipment.',
     features: [
       'Multi-activity adventures',
@@ -174,9 +174,9 @@ const serviceData: Record<string, ServiceData> = {
     groupSize: '4-10 People',
     includes: ['All equipment', 'Professional guides', 'Meals', 'Accommodation', 'Training'],
     gallery: [
-      '/adventureExperiences.jpeg',
-      '/adventureExp/adventureExp2.jpeg',
-      '/adventureExp/adventureExp1.jpeg'
+      '/experiencesImg/adventureExp/adventureExp4.jpeg',
+      'experiencesImg/adventureExp/adventureExp2.jpeg',
+      'experiencesImg/adventureExp/adventureExp1.jpeg'
     ]
   }
 };

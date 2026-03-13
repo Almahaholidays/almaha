@@ -192,7 +192,7 @@ const OurStory: React.FC = () => {
 
               <div className="relative z-10 rounded-2xl overflow-hidden aspect-[4/5] shadow-[0_30px_70px_rgba(0,0,0,0.14)]">
                 <img
-                  src="/destinations/Muscat3.jpeg"
+                  src="/destinations/muscatImg/Muscat3.jpeg"
                   alt="Al Maha Tourism"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]"
                 />
@@ -591,7 +591,7 @@ const MeetTheTeam: React.FC = () => {
           {/* Photo wrapper */}
           <div className="relative overflow-hidden rounded-3xl aspect-[16/7] group">
             <img
-              src="/TeamPic.jpeg"
+              src="aboutImg/TeamPic.jpeg"
               alt="The Al Maha Tourism team"
               className="w-full h-full object-cover object-center transition-transform duration-[1400ms] ease-out group-hover:scale-[1.04]"
             />

@@ -15,35 +15,35 @@ const ServicesSection: React.FC = () => {
       title: "Canyoning & Caving",
       subtitle: "Extreme Exploration",
       description: "Discover hidden caves and canyons",
-      image: "/cannyoning.jpg",
+      image: "/experiencesImg/canyonningExp/cannyoning1.jpg",
       slug: "canyoning-caving"
     },
     {
       title: "Culture Tour",
       subtitle: "Heritage & Traditions",
       description: "Immerse yourself in Oman's rich cultural heritage and ancient traditions",
-      image: "/culture.jpeg",
+      image: "/experiencesImg/cultureExp/culture.jpeg",
       slug: "culture-tour"
     },
     {
       title: "Car Rental",
       subtitle: "Flexible Mobility",
       description: "Premium vehicles for your journey",
-      image: "/carAboutUs.jpeg",
+      image: "experiencesImg/carExp/carRental2.jpeg",
       slug: "car-rental"
     },
     {
       title: "Luxury Tour",
       subtitle: "5-Star Experience",
       description: "Indulge in exclusive experiences",
-      image: "/AlilaExperiences.webp",
+      image: "experiencesImg/luxuryExp/luxury3.webp",
       slug: "luxury-tour"
     },
     {
       title: "Adventure Tour",
       subtitle: "Thrilling Experiences",
       description: "Push your limits with exciting adventures",
-      image: "/adventureExperiences.jpeg",
+      image: "experiencesImg/adventureExp/adventureExp4.jpeg",
       slug: "adventure-tour"
     },
   ];

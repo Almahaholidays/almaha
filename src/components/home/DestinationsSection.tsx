@@ -113,7 +113,7 @@ const DestinationsSection: React.FC = () => {
     {
       title: 'Nizwa',
       description: 'Historic forts and traditional souks in the cultural heartland of Oman.',
-      image: '/destinations/Nizwa2.jpeg',
+      image: '/destinations/nizwaImg/Nizwa2.jpeg',
       tag: 'Heritage',
       slug: 'nizwa',
     },
@@ -127,7 +127,7 @@ const DestinationsSection: React.FC = () => {
     {
       title: 'Jebel Akhdar',
       description: 'Terraced rose gardens and cool mountain retreats high above the Omani plains.',
-      image: '/destinations/Jebelakhdar.jpeg',
+      image: '/destinations/jebelakhdarImg/Jebelakhdar.jpeg',
       tag: 'Mountains',
       slug: 'jebel-akhdar',
     },

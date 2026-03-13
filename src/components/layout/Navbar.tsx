@@ -133,6 +133,8 @@ export default function Navbar() {
   const [isEventsOpen, setIsEventsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileEventsOpen, setMobileEventsOpen] = useState(false);
   const lastScrollY = useRef(0);
   const servicesTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const eventsTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -155,10 +157,22 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [isMenuOpen]);
+
   useEffect(() => {
     setIsMenuOpen(false);
     setIsServicesOpen(false);
     setIsEventsOpen(false);
+    setMobileServicesOpen(false);
+    setMobileEventsOpen(false);
   }, [location]);
 
   const handleServicesEnter = () => {
@@ -207,6 +221,12 @@ export default function Navbar() {
     handleEventsLeave();
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setMobileServicesOpen(false);
+    setMobileEventsOpen(false);
+  };
+
   return (
     <>
       <header
@@ -222,7 +242,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
               <img
-                src={`${import.meta.env.BASE_URL}almaha_logo1.png`}
+                src={`${import.meta.env.BASE_URL}logo/almaha_logo1.png`}
                 alt="Al Maha Tourism"
                 className="h-12 md:h-14 object-contain"
               />
@@ -327,22 +347,23 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden text-black p-2"
+              className="lg:hidden flex items-center justify-center w-10 h-10 rounded-full text-black transition-colors duration-200 hover:bg-black/5 active:bg-black/10"
+              aria-label="Toggle menu"
             >
-              <div className="w-6 flex flex-col gap-1.5">
+              <div className="w-5 flex flex-col gap-[5px]">
                 <span
                   className={`block h-[1.5px] bg-current transition-all duration-300 origin-center ${
-                    isMenuOpen ? 'rotate-45 translate-y-[7px]' : ''
+                    isMenuOpen ? 'rotate-45 translate-y-[6.5px]' : ''
                   }`}
                 />
                 <span
                   className={`block h-[1.5px] bg-current transition-all duration-300 ${
-                    isMenuOpen ? 'opacity-0 scale-0' : ''
+                    isMenuOpen ? 'opacity-0 scale-x-0' : ''
                   }`}
                 />
                 <span
                   className={`block h-[1.5px] bg-current transition-all duration-300 origin-center ${
-                    isMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''
+                    isMenuOpen ? '-rotate-45 -translate-y-[6.5px]' : ''
                   }`}
                 />
               </div>
@@ -623,7 +644,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Backdrop overlay when dropdown is open */}
+      {/* Desktop backdrop overlay when dropdown is open */}
       <div
         className={`hidden lg:block fixed inset-0 bg-black/40 z-40 transition-opacity duration-400 ${
           isServicesOpen || isEventsOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
@@ -632,190 +653,264 @@ export default function Navbar() {
         onClick={() => { setIsServicesOpen(false); setIsEventsOpen(false); }}
       />
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu — full-screen slide-in panel */}
       <div
-        className={`lg:hidden fixed inset-0 bg-[#010101] z-40 transition-all duration-500 ${
-          isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+        className={`lg:hidden fixed inset-0 z-40 transition-all duration-500 ease-in-out ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
+        style={{ backgroundColor: '#0a0a0a' }}
       >
-        <nav className="flex flex-col px-6 pt-28 pb-12 h-full overflow-y-auto">
-          {/* Main Nav Items */}
-          <div className="space-y-1">
+        {/* Top bar inside menu — logo + close */}
+        <div className="flex items-center justify-between px-6 h-20">
+          <Link to="/" onClick={closeMenu}>
+            <img
+              src={`${import.meta.env.BASE_URL}logo/almaha_logo1.png`}
+              alt="Al Maha Tourism"
+              className="h-10 object-contain brightness-0 invert"
+            />
+          </Link>
+          <button
+            onClick={closeMenu}
+            className="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-all duration-200"
+            aria-label="Close menu"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path strokeLinecap="round" d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Scrollable nav content */}
+        <nav className="flex flex-col px-6 pb-10 h-[calc(100%-5rem)] overflow-y-auto">
+
+          {/* Primary nav links */}
+          <div className="space-y-0 mb-2">
+
+            {/* Home */}
             <Link
               to="/"
-              className={`block py-4 font-['Lato'] text-[2rem] font-bold tracking-[-0.02em] text-white/40 hover:text-white transition-all duration-300 border-b border-white/5`}
+              className="flex items-center justify-between py-4 border-b border-white/[0.06] group"
               style={{
                 opacity: isMenuOpen ? 1 : 0,
-                transform: isMenuOpen ? 'translateY(0)' : 'translateY(20px)',
-                transition: `opacity 0.4s ease 0s, transform 0.4s ease 0s`,
+                transform: isMenuOpen ? 'translateX(0)' : 'translateX(30px)',
+                transition: 'opacity 0.45s ease 0.05s, transform 0.45s ease 0.05s',
               }}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMenu}
             >
-              Home
+              <span className={`font-['Lato'] text-[1.6rem] font-bold tracking-[-0.02em] transition-colors duration-200 ${
+                location.pathname === '/' ? 'text-white' : 'text-white/40 group-hover:text-white'
+              }`}>
+                Home
+              </span>
+              {location.pathname === '/' && (
+                <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: '#e3261d' }} />
+              )}
             </Link>
 
+            {/* Our Experiences — accordion */}
             <div
-              className={`block py-4 font-['Lato'] text-[2rem] font-bold tracking-[-0.02em] text-white/40 hover:text-white transition-all duration-300 border-b border-white/5 cursor-default`}
               style={{
                 opacity: isMenuOpen ? 1 : 0,
-                transform: isMenuOpen ? 'translateY(0)' : 'translateY(20px)',
-                transition: `opacity 0.4s ease 0.05s, transform 0.4s ease 0.05s`,
+                transform: isMenuOpen ? 'translateX(0)' : 'translateX(30px)',
+                transition: 'opacity 0.45s ease 0.1s, transform 0.45s ease 0.1s',
               }}
             >
-              Our Experiences
+              <button
+                className="w-full flex items-center justify-between py-4 border-b border-white/[0.06] group"
+                onClick={() => { setMobileServicesOpen(!mobileServicesOpen); setMobileEventsOpen(false); }}
+              >
+                <span className={`font-['Lato'] text-[1.6rem] font-bold tracking-[-0.02em] transition-colors duration-200 ${
+                  mobileServicesOpen ? 'text-white' : 'text-white/40 group-hover:text-white'
+                }`}>
+                  Our Experiences
+                </span>
+                <svg
+                  width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
+                  className={`text-white/30 flex-shrink-0 transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {/* Accordion content */}
+              <div
+                className="overflow-hidden transition-all duration-400 ease-in-out"
+                style={{ maxHeight: mobileServicesOpen ? `${services.length * 72}px` : '0px' }}
+              >
+                <div className="py-2 pl-2 space-y-1">
+                  {services.map((service) => (
+                    <Link
+                      key={service.label}
+                      to={service.href}
+                      className="flex items-center gap-4 px-3 py-3 rounded-xl hover:bg-white/5 active:bg-white/10 transition-colors duration-200"
+                      onClick={closeMenu}
+                    >
+                      <div className="flex items-center justify-center w-9 h-9 rounded-lg flex-shrink-0" style={{ backgroundColor: 'rgba(227,38,29,0.15)', color: '#e3261d' }}>
+                        {service.icon}
+                      </div>
+                      <div>
+                        <span className="block font-['Lato'] text-[0.95rem] font-medium text-white/80">
+                          {service.label}
+                        </span>
+                        <span className="block font-['Lato'] text-[0.75rem] text-white/35 mt-0.5">
+                          {service.description}
+                        </span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
 
+            {/* Our Services — accordion */}
             <div
-              className={`block py-4 font-['Lato'] text-[2rem] font-bold tracking-[-0.02em] text-white/40 hover:text-white transition-all duration-300 border-b border-white/5 cursor-default`}
               style={{
                 opacity: isMenuOpen ? 1 : 0,
-                transform: isMenuOpen ? 'translateY(0)' : 'translateY(20px)',
-                transition: `opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s`,
+                transform: isMenuOpen ? 'translateX(0)' : 'translateX(30px)',
+                transition: 'opacity 0.45s ease 0.15s, transform 0.45s ease 0.15s',
               }}
             >
-              Our Services
+              <button
+                className="w-full flex items-center justify-between py-4 border-b border-white/[0.06] group"
+                onClick={() => { setMobileEventsOpen(!mobileEventsOpen); setMobileServicesOpen(false); }}
+              >
+                <span className={`font-['Lato'] text-[1.6rem] font-bold tracking-[-0.02em] transition-colors duration-200 ${
+                  mobileEventsOpen ? 'text-white' : 'text-white/40 group-hover:text-white'
+                }`}>
+                  Our Services
+                </span>
+                <svg
+                  width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
+                  className={`text-white/30 flex-shrink-0 transition-transform duration-300 ${mobileEventsOpen ? 'rotate-180' : ''}`}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {/* Accordion content */}
+              <div
+                className="overflow-hidden transition-all duration-400 ease-in-out"
+                style={{ maxHeight: mobileEventsOpen ? `${events.length * 72}px` : '0px' }}
+              >
+                <div className="py-2 pl-2 space-y-1">
+                  {events.map((event) => (
+                    <Link
+                      key={event.label}
+                      to={event.href}
+                      className="flex items-center gap-4 px-3 py-3 rounded-xl hover:bg-white/5 active:bg-white/10 transition-colors duration-200"
+                      onClick={closeMenu}
+                    >
+                      <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-white/[0.06] text-white/40 flex-shrink-0">
+                        {event.icon}
+                      </div>
+                      <div>
+                        <span className="block font-['Lato'] text-[0.95rem] font-medium text-white/80">
+                          {event.label}
+                        </span>
+                        <span className="block font-['Lato'] text-[0.75rem] text-white/35 mt-0.5">
+                          {event.description}
+                        </span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
 
+            {/* Destinations */}
             <Link
               to="/destinations"
-              className={`block py-4 font-['Lato'] text-[2rem] font-bold tracking-[-0.02em] text-white/40 hover:text-white transition-all duration-300 border-b border-white/5`}
+              className="flex items-center justify-between py-4 border-b border-white/[0.06] group"
               style={{
                 opacity: isMenuOpen ? 1 : 0,
-                transform: isMenuOpen ? 'translateY(0)' : 'translateY(20px)',
-                transition: `opacity 0.4s ease 0.15s, transform 0.4s ease 0.15s`,
+                transform: isMenuOpen ? 'translateX(0)' : 'translateX(30px)',
+                transition: 'opacity 0.45s ease 0.2s, transform 0.45s ease 0.2s',
               }}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMenu}
             >
-              Destinations
+              <span className={`font-['Lato'] text-[1.6rem] font-bold tracking-[-0.02em] transition-colors duration-200 ${
+                location.pathname === '/destinations' ? 'text-white' : 'text-white/40 group-hover:text-white'
+              }`}>
+                Destinations
+              </span>
+              {location.pathname === '/destinations' && (
+                <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: '#e3261d' }} />
+              )}
             </Link>
 
+            {/* Remaining nav items */}
             {navItems.slice(1).map((item, index) => (
               <Link
                 key={item.label}
                 to={item.href}
-                className={`block py-4 font-['Lato'] text-[2rem] font-bold tracking-[-0.02em] text-white/40 hover:text-white transition-all duration-300 border-b border-white/5`}
+                className="flex items-center justify-between py-4 border-b border-white/[0.06] group"
                 style={{
                   opacity: isMenuOpen ? 1 : 0,
-                  transform: isMenuOpen ? 'translateY(0)' : 'translateY(20px)',
-                  transition: `opacity 0.4s ease ${(index + 4) * 0.05}s, transform 0.4s ease ${(index + 4) * 0.05}s`,
+                  transform: isMenuOpen ? 'translateX(0)' : 'translateX(30px)',
+                  transition: `opacity 0.45s ease ${0.25 + index * 0.05}s, transform 0.45s ease ${0.25 + index * 0.05}s`,
                 }}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={closeMenu}
               >
-                {item.label}
+                <span className={`font-['Lato'] text-[1.6rem] font-bold tracking-[-0.02em] transition-colors duration-200 ${
+                  location.pathname === item.href ? 'text-white' : 'text-white/40 group-hover:text-white'
+                }`}>
+                  {item.label}
+                </span>
+                {location.pathname === item.href && (
+                  <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: '#e3261d' }} />
+                )}
               </Link>
             ))}
           </div>
 
-          {/* Services List for Mobile */}
-          <div className="mt-8">
-            <span className="font-['Lato'] text-[0.7rem] uppercase tracking-[0.2em]" style={{ color: '#4e3779' }}>
-              Our Experiences
-            </span>
-            <div className="mt-4 space-y-2">
-              {services.map((service, index) => (
-                <Link
-                  key={service.label}
-                  to={service.href}
-                  className="flex items-start gap-4 py-3 px-3 rounded-lg hover:bg-white/5 transition-colors duration-300"
-                  style={{
-                    opacity: isMenuOpen ? 1 : 0,
-                    transform: isMenuOpen ? 'translateX(0)' : 'translateX(-20px)',
-                    transition: `opacity 0.4s ease ${0.25 + index * 0.05}s, transform 0.4s ease ${0.25 + index * 0.05}s`,
-                  }}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <div className="flex items-center justify-center w-10 h-10 rounded-lg flex-shrink-0" style={{ backgroundColor: 'rgba(227, 38, 29, 0.2)', color: '#e3261d' }}>
-                    {service.icon}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2">
-                      <span className="block font-['Lato'] text-[0.95rem] text-white/80">
-                        {service.label}
-                      </span>
-                    </div>
-                    <span className="block font-['Lato'] text-[0.75rem] text-white/40 mt-0.5">
-                      {service.description}
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Events List for Mobile */}
-          <div className="mt-8">
-            <span className="font-['Lato'] text-[0.7rem] uppercase tracking-[0.2em]" style={{ color: '#4e3779' }}>
-              Our Services
-            </span>
-            <div className="mt-4 space-y-2">
-              {events.map((event, index) => (
-                <Link
-                  key={event.label}
-                  to={event.href}
-                  className="flex items-start gap-4 py-3 px-3 rounded-lg hover:bg-white/5 transition-colors duration-300"
-                  style={{
-                    opacity: isMenuOpen ? 1 : 0,
-                    transform: isMenuOpen ? 'translateX(0)' : 'translateX(-20px)',
-                    transition: `opacity 0.4s ease ${0.3 + index * 0.05}s, transform 0.4s ease ${0.3 + index * 0.05}s`,
-                  }}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-white/5 text-white/40 flex-shrink-0">
-                    {event.icon}
-                  </div>
-                  <div className="flex-1">
-                    <span className="block font-['Lato'] text-[0.95rem] text-white/80">
-                      {event.label}
-                    </span>
-                    <span className="block font-['Lato'] text-[0.75rem] text-white/40 mt-0.5">
-                      {event.description}
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* CTA Button */}
+          {/* CTA + Contact — pushed to bottom */}
           <div className="mt-auto pt-8">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center gap-3 w-full py-4 font-['Lato'] text-[0.9rem] font-semibold text-white rounded-full transition-all duration-300"
-              style={{ backgroundColor: '#e3261d', transition: 'background-color 0.3s' }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(227, 38, 29, 0.8)'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#e3261d'}
-              onClick={() => setIsMenuOpen(false)}
+              className="flex items-center justify-center gap-3 w-full py-4 font-['Lato'] text-[0.9rem] font-semibold text-white rounded-full transition-all duration-300 active:scale-[0.98]"
+              style={{ backgroundColor: '#e3261d' }}
+              onClick={closeMenu}
             >
               <span>Get Started</span>
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 12 12"
-                fill="none"
-                className="transform -rotate-45"
-              >
+              <svg width="14" height="14" viewBox="0 0 12 12" fill="none" className="-rotate-45">
                 <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1.5" />
               </svg>
             </Link>
-          </div>
 
-          {/* Contact Info */}
-          <div className="mt-8 pt-8 border-t border-white/5">
-            <a href="mailto:salessupport@almahaholidays.com" className="block font-['Lato'] text-[0.85rem] text-white/40 transition-colors"
-              style={{ transition: 'color 0.3s' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#e3261d'}
-              onMouseLeave={(e) => e.currentTarget.style.color = ''}>
-              salessupport@almahaholidays.com
-            </a>
-            <a href="tel:+96898036952" className="block font-['Lato'] text-[0.85rem] text-white/40 transition-colors mt-2"
-              style={{ transition: 'color 0.3s' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#e3261d'}
-              onMouseLeave={(e) => e.currentTarget.style.color = ''}>
-              +968 9803 6952
-            </a>
+            <div className="mt-6 flex items-center gap-6 pt-6 border-t border-white/[0.06]">
+              <a
+                href="mailto:salessupport@almahaholidays.com"
+                className="flex items-center gap-2 font-['Lato'] text-[0.8rem] text-white/35 hover:text-white/70 transition-colors duration-200"
+              >
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                salessupport@almahaholidays.com
+              </a>
+            </div>
+            <div className="mt-3">
+              <a
+                href="tel:+96898036952"
+                className="flex items-center gap-2 font-['Lato'] text-[0.8rem] text-white/35 hover:text-white/70 transition-colors duration-200"
+              >
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                +968 9803 6952
+              </a>
+            </div>
           </div>
         </nav>
       </div>
+
+      {/* Mobile backdrop — tap to close */}
+      <div
+        className={`lg:hidden fixed inset-0 bg-black/60 z-30 transition-opacity duration-500 ${
+          isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+        }`}
+        onClick={closeMenu}
+      />
     </>
   );
 }

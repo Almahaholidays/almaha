@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
           {/* About Column */}
           <div>
             <img
-              src={`${import.meta.env.BASE_URL}almaha_logo1.png`}
+              src={`${import.meta.env.BASE_URL}logo/almaha_logo1.png`}
               alt="Al Maha Tourism"
               className="h-20 mb-6 object-contain"
             />

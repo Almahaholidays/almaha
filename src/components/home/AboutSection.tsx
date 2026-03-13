@@ -81,7 +81,7 @@ const AboutSection: React.FC = () => {
               }} />
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative z-10">
                 <img
-                  src="/carExperiences.jpg"
+                  src="/aboutImg/car.jpg"
                   alt="Al Maha Tourism"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />

@@ -13,19 +13,19 @@ const events: EventItem[] = [
   {
     title: 'MICE',
     fullName: 'Meetings & Conferences',
-    image: '/mice/mice2.jpeg',
+    image: 'servicesImg/mice/mice2.jpeg',
     slug: 'mice',
   },
   {
     title: 'FIT',
     fullName: 'Independent Travel',
-    image: '/fit/SoloCamelRide.jpg',
+    image: 'servicesImg/fit/SoloCamelRide.jpg',
     slug: 'fit',
   },
   {
     title: 'GROUP',
     fullName: 'Group Adventures',
-    image: '/group/GroupCampfire.jpg',
+    image: 'servicesImg/group/GroupCampfire.jpg',
     slug: 'group',
   },
   {

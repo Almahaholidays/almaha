@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
       subtitle: 'Travelling along winding roads through mountains, beaches, and ancient backwaters',
     },
     {
-      image: '/destinations/Nizwa2.jpeg',
+      image: '/destinations/nizwaImg/Nizwa2.jpeg',
       title: 'Ancient Forts & Heritage',
       subtitle: 'Journey through time exploring magnificent forts and cultural treasures',
     },
@@ -136,7 +136,7 @@ const HeroSection: React.FC = () => {
         </span>
       </div>
 
-      {/* ── Bottom bar: indicators + scroll ── */}
+      {/* ── Bottom bar: indicators ── */}
       <div className="absolute bottom-10 left-0 right-0 z-20 flex items-center justify-between px-6 lg:px-12">
 
         {/* Slide pill indicators */}
@@ -154,14 +154,14 @@ const HeroSection: React.FC = () => {
             />
           ))}
         </div>
+      </div>
 
-        {/* Scroll indicator */}
-        <div className="flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-white/40 text-[9px] tracking-[0.3em] uppercase font-medium">Scroll</span>
-          <svg className="w-4 h-4 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </div>
+      {/* Scroll indicator — centered */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-bounce">
+        <span className="text-white/40 text-[9px] tracking-[0.3em] uppercase font-medium">Scroll</span>
+        <svg className="w-4 h-4 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
       </div>
 
     </section>

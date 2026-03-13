@@ -145,7 +145,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
 
           {/* Logo centered inside the orbit */}
           <img
-            src={`${import.meta.env.BASE_URL}almaha_logo1.png`}
+            src={`${import.meta.env.BASE_URL}logo/almaha_logo1.png`}
             alt="Al Maha Tourism"
             className="h-12 md:h-16 object-contain relative z-10"
             style={{ filter: 'brightness(1.05)' }}

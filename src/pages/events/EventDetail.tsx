@@ -22,7 +22,7 @@ const eventData: Record<string, EventData> = {
     title: 'MICE',
     fullName: 'Meetings, Incentives, Conferences & Exhibitions',
     tagline: 'Where Business Meets Excellence',
-    hero: '/mice/mice2.jpeg',
+    hero: 'servicesImg/mice/mice2.jpeg',
     description: 'Transform your corporate events into memorable experiences with our world-class venues, seamless logistics, and professional event management services.',
     longDescription: 'From intimate board meetings to large-scale international conferences, we provide comprehensive MICE solutions that elevate your corporate events. Our expert team handles everything from venue selection and technical setup to catering and entertainment, ensuring your event runs flawlessly while you focus on your business objectives.',
     features: [
@@ -50,7 +50,7 @@ const eventData: Record<string, EventData> = {
       'Custom branding and production services'
     ],
     gallery: [
-      '/mice/mice2.jpeg',
+      'servicesImg/mice/mice2.jpeg',
       'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80',
       'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80',
       'https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&q=80',
@@ -64,7 +64,7 @@ const eventData: Record<string, EventData> = {
     title: 'FIT',
     fullName: 'Free Independent Traveler',
     tagline: 'Your Journey, Your Way',
-    hero: '/fit/SoloCamelRide.jpg',
+    hero: 'servicesImg/fit/SoloCamelRide.jpg',
     description: 'Explore Oman at your own pace with our personalized itineraries, flexible schedules, and tailored experiences designed just for you.',
     longDescription: 'Freedom meets expertise with our FIT services. Whether you\'re a solo adventurer or traveling with family, we craft bespoke journeys that reflect your interests and pace. From hidden gems to iconic landmarks, experience Oman your way with our expert guidance and full flexibility.',
     features: [
@@ -92,10 +92,10 @@ const eventData: Record<string, EventData> = {
       '24/7 concierge support'
     ],
     gallery: [
-      '/fit/Solo.jpg',
-      '/fit/SoloCamelRide.jpg',
-      '/fit/SoloCampfire.jpg',
-      '/fit/SoloCooking.jpg',
+      'servicesImg/fit/Solo.jpg',
+      'servicesImg/fit/SoloCamelRide.jpg',
+      'servicesImg/fit/SoloCampfire.jpg',
+      'servicesImg/fit/SoloCooking.jpg',
     ],
     testimonials: [
       { name: 'Emma Williams', role: 'Travel Blogger', content: 'The flexibility was amazing! Changed my plans multiple times and they adapted seamlessly. Discovered places I never would have found alone.', avatar: 'https://i.pravatar.cc/150?img=5' },
@@ -106,7 +106,7 @@ const eventData: Record<string, EventData> = {
     title: 'GROUP',
     fullName: 'Group Tours & Travel',
     tagline: 'Share the Adventure',
-    hero: '/group/GroupCampfire.jpg',
+    hero: 'servicesImg/group/GroupCampfire.jpg',
     description: 'Join fellow adventurers on curated group journeys that blend camaraderie, culture, and unforgettable moments across Oman.',
     longDescription: 'Experience the joy of shared discovery with our expertly guided group tours. Meet like-minded travelers, share incredible moments, and enjoy the benefits of group travel while exploring Oman\'s treasures. Our small group sizes ensure personal attention and authentic connections.',
     features: [
@@ -134,10 +134,10 @@ const eventData: Record<string, EventData> = {
       'Expert local guides'
     ],
     gallery: [
-      '/group/GroupCamel.jpg',
-      '/group/GroupCampfire.jpg',
-      '/group/GroupCar.jpg',
-      '/group/GroupLunch.jpg',
+      'servicesImg/group/GroupCamel.jpg',
+      'servicesImg/group/GroupCampfire.jpg',
+      'servicesImg/group/GroupCar.jpg',
+      'servicesImg/group/GroupLunch.jpg',
     ],
     testimonials: [
       { name: 'Lisa Chen', role: 'Teacher, Solo Traveler', content: 'As a solo traveler, I felt welcomed and safe. Made amazing friends and the itinerary was perfect!', avatar: 'https://i.pravatar.cc/150?img=9' },
