@@ -15,36 +15,36 @@ interface Photo {
 
 const photos: Photo[] = [
   // Destinations
-  { id: 1,  url: 'https://images.unsplash.com/photo-1601890976279-0b4ff3233938?w=900&q=80', title: 'Muscat', sub: 'The Vibrant Capital', category: 'Destinations', aspect: 'portrait' },
-  { id: 2,  url: 'https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=900&q=80', title: 'Wahiba Sands', sub: 'Golden Desert Dunes', category: 'Destinations', aspect: 'landscape' },
-  { id: 3,  url: '/destinations/NizwaFort.jpg', title: 'Nizwa Fort', sub: 'Cultural Heartland', category: 'Destinations', aspect: 'square' },
-  { id: 4,  url: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&q=80', title: 'Salalah', sub: 'Tropical Paradise', category: 'Destinations', aspect: 'landscape' },
-  { id: 5,  url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80', title: 'Jebel Akhdar', sub: 'Mountain Retreat', category: 'Destinations', aspect: 'portrait' },
-  { id: 6,  url: 'https://images.unsplash.com/photo-1520454974749-611b7248ffdb?w=900&q=80', title: 'Sur', sub: 'Coastal Heritage', category: 'Destinations', aspect: 'landscape' },
+  { id: 1,  url: '/destinations/muscatImg/Muscat1.jpeg', title: 'Muscat', sub: 'The Vibrant Capital', category: 'Destinations', aspect: 'portrait' },
+  { id: 2,  url: '/destinations/wahibaImg/wahiba1.jpeg', title: 'Wahiba Sands', sub: 'Golden Desert Dunes', category: 'Destinations', aspect: 'landscape' },
+  { id: 3,  url: '/destinations/nizwaImg/Nizwa1.jpeg', title: 'Nizwa Fort', sub: 'Cultural Heartland', category: 'Destinations', aspect: 'square' },
+  { id: 4,  url: '/destinations/salalahImg/Salalah1.jpeg', title: 'Salalah', sub: 'Tropical Paradise', category: 'Destinations', aspect: 'landscape' },
+  { id: 5,  url: '/destinations/jebelakhdarImg/Jebelakhdar.jpeg', title: 'Jebel Akhdar', sub: 'Mountain Retreat', category: 'Destinations', aspect: 'portrait' },
+  { id: 6,  url: '/destinations/surImg/sur1.jpeg', title: 'Sur', sub: 'Coastal Heritage', category: 'Destinations', aspect: 'landscape' },
 
   // Experiences
-  { id: 7,  url: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=900&q=80', title: 'Trekking Tours', sub: '1–9 Day Adventures', category: 'Experiences', aspect: 'portrait' },
-  { id: 8,  url: 'https://images.unsplash.com/photo-1533130061792-64b345e4a833?w=900&q=80', title: 'Canyoning & Caving', sub: 'Extreme Exploration', category: 'Experiences', aspect: 'square' },
-  { id: 9,  url: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80', title: 'Wellness Retreats', sub: 'Luxury Escapes', category: 'Experiences', aspect: 'portrait' },
-  { id: 10, url: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=900&q=80', title: 'Car Rental', sub: 'Flexible Mobility', category: 'Experiences', aspect: 'landscape' },
-  { id: 11, url: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=900&q=80', title: 'Desert Journey', sub: 'Open Road Travel', category: 'Experiences', aspect: 'landscape' },
-  { id: 12, url: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=900&q=80', title: 'Scenic Escapes', sub: 'Adventure Travel', category: 'Experiences', aspect: 'square' },
+  { id: 7,  url: '/experiencesImg/trekkingExp/trekkExp1.jpeg', title: 'Trekking Tours', sub: '1–9 Day Adventures', category: 'Experiences', aspect: 'portrait' },
+  { id: 8,  url: '/experiencesImg/canyonningExp/cannyoning1.jpeg', title: 'Canyoning & Caving', sub: 'Extreme Exploration', category: 'Experiences', aspect: 'square' },
+  { id: 9,  url: '/experiencesImg/luxuryExp/luxury1.webp', title: 'Wellness Retreats', sub: 'Luxury Escapes', category: 'Experiences', aspect: 'portrait' },
+  { id: 10, url: '/experiencesImg/carExp/carRental1.jpeg', title: 'Car Rental', sub: 'Flexible Mobility', category: 'Experiences', aspect: 'landscape' },
+  { id: 11, url: '/experiencesImg/adventureExp/adventureExp1.jpeg', title: 'Desert Journey', sub: 'Open Road Travel', category: 'Experiences', aspect: 'landscape' },
+  { id: 12, url: '/experiencesImg/cultureExp/culture.jpeg', title: 'Scenic Escapes', sub: 'Adventure Travel', category: 'Experiences', aspect: 'square' },
 
   // Events
-  { id: 13, url: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=900&q=80', title: 'MICE Events', sub: 'Corporate Excellence', category: 'Events', aspect: 'landscape' },
-  { id: 14, url: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=80', title: 'Destination Weddings', sub: 'Your Perfect Day', category: 'Events', aspect: 'portrait' },
-  { id: 15, url: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=900&q=80', title: 'Conferences', sub: 'World-Class Events', category: 'Events', aspect: 'landscape' },
-  { id: 16, url: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=900&q=80', title: 'Wedding Ceremony', sub: 'Beachfront Vows', category: 'Events', aspect: 'square' },
-  { id: 17, url: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80', title: 'Independent Travel', sub: 'FIT Journeys', category: 'Events', aspect: 'landscape' },
-  { id: 18, url: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=80', title: 'Group Adventures', sub: 'Shared Memories', category: 'Events', aspect: 'portrait' },
+  { id: 13, url: '/servicesImg/mice/mice1.jpeg', title: 'MICE Events', sub: 'Corporate Excellence', category: 'Events', aspect: 'landscape' },
+  { id: 14, url: '/experiencesImg/luxuryExp/luxury2.jpg', title: 'Destination Weddings', sub: 'Your Perfect Day', category: 'Events', aspect: 'portrait' },
+  { id: 15, url: '/servicesImg/mice/mice2.jpeg', title: 'Conferences', sub: 'World-Class Events', category: 'Events', aspect: 'landscape' },
+  { id: 16, url: '/experiencesImg/luxuryExp/luxury3.webp', title: 'Wedding Ceremony', sub: 'Beachfront Vows', category: 'Events', aspect: 'square' },
+  { id: 17, url: '/servicesImg/fit/Solo.jpg', title: 'Independent Travel', sub: 'FIT Journeys', category: 'Events', aspect: 'landscape' },
+  { id: 18, url: '/servicesImg/group/GroupCamel.jpg', title: 'Group Adventures', sub: 'Shared Memories', category: 'Events', aspect: 'portrait' },
 
   // Moments
-  { id: 19, url: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80', title: 'Event Night', sub: 'Unforgettable Evenings', category: 'Moments', aspect: 'landscape' },
-  { id: 20, url: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=900&q=80', title: 'Cultural Discovery', sub: 'Local Traditions', category: 'Moments', aspect: 'square' },
-  { id: 21, url: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=900&q=80', title: 'Grand Gathering', sub: 'Special Occasions', category: 'Moments', aspect: 'portrait' },
-  { id: 22, url: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=900&q=80', title: 'Wedding Bliss', sub: 'Precious Moments', category: 'Moments', aspect: 'landscape' },
-  { id: 23, url: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=900&q=80', title: 'Ancient Heritage', sub: 'Timeless Oman', category: 'Moments', aspect: 'portrait' },
-  { id: 24, url: 'https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=900&q=80', title: 'Adventure Together', sub: 'Group Experiences', category: 'Moments', aspect: 'square' },
+  { id: 19, url: '/servicesImg/mice/mice3.jpeg', title: 'Event Night', sub: 'Unforgettable Evenings', category: 'Moments', aspect: 'landscape' },
+  { id: 20, url: '/experiencesImg/cultureExp/traditionalSouq.jpg', title: 'Cultural Discovery', sub: 'Local Traditions', category: 'Moments', aspect: 'square' },
+  { id: 21, url: '/servicesImg/mice/mice4.jpeg', title: 'Grand Gathering', sub: 'Special Occasions', category: 'Moments', aspect: 'portrait' },
+  { id: 22, url: '/servicesImg/group/GroupLunch.jpg', title: 'Group Dining', sub: 'Shared Memories', category: 'Moments', aspect: 'landscape' },
+  { id: 23, url: '/destinations/nizwaImg/Nizwa2.jpeg', title: 'Ancient Heritage', sub: 'Timeless Oman', category: 'Moments', aspect: 'portrait' },
+  { id: 24, url: '/servicesImg/group/GroupCampfire.jpg', title: 'Adventure Together', sub: 'Group Experiences', category: 'Moments', aspect: 'square' },
 ];
 
 const categories = ['All', 'Destinations', 'Experiences', 'Events', 'Moments'];
@@ -112,7 +112,7 @@ const Lightbox: React.FC<{
       onClick={(e) => e.stopPropagation()}
     >
       <img
-        src={photo.url.replace('w=900', 'w=1400')}
+        src={photo.url}
         alt={photo.title}
         className="max-w-full max-h-[80vh] object-contain rounded-xl shadow-[0_30px_80px_rgba(0,0,0,0.8)]"
       />
