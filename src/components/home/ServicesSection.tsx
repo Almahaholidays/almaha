@@ -8,14 +8,14 @@ const ServicesSection: React.FC = () => {
       title: "Trekking Tour",
       subtitle: "1-9 Day Adventures",
       description: "Explore Oman's stunning mountain ranges and ancient trails",
-      image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80",
+      image: "experiencesImg/trekkingExp/trekkExp3.jpeg",
       slug: "trekking-tour"
     },
     {
       title: "Canyoning & Caving",
       subtitle: "Extreme Exploration",
       description: "Discover hidden caves and canyons",
-      image: "/experiencesImg/canyonningExp/cannyoning1.jpg",
+      image: "/experiencesImg/canyonningExp/cannyoning1.jpeg",
       slug: "canyoning-caving"
     },
     {

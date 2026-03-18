@@ -51,9 +51,9 @@ const eventData: Record<string, EventData> = {
     ],
     gallery: [
       'servicesImg/mice/mice2.jpeg',
-      'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80',
-      'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80',
-      'https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&q=80',
+      'servicesImg/mice/mice1.jpeg',
+      'servicesImg/mice/mice3.jpeg',
+      'servicesImg/mice/mice4.jpeg',
     ],
     testimonials: [
       { name: 'Sarah Johnson', role: 'Director, TechCorp', content: 'Outstanding service! Our annual conference was seamlessly executed. The team handled everything professionally.', avatar: 'https://i.pravatar.cc/150?img=1' },

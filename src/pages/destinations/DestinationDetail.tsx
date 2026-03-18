@@ -51,7 +51,7 @@ const destinations: Record<string, DestinationData> = {
       {
         title: 'Old Muscat & Mutrah Heritage Walk',
         description: 'Wander through the ancient lanes of Old Muscat, past the whitewashed Al Alam Palace and centuries-old Portuguese forts before descending into the aromatic maze of Mutrah Souq. A living museum where traders still exchange frankincense resin by weight.',
-        image: '/destinations/muscatImg/Muscat5.webp',
+        image: '/destinations/muscatImg/Muscat5.jpeg',
       },
       {
         title: 'Royal Opera House Evening',
@@ -61,7 +61,7 @@ const destinations: Record<string, DestinationData> = {
       {
         title: 'Coastal Sunset Cruise',
         description: 'Board a traditional dhow and sail along Muscat\'s dramatic coastline as the sun descends behind the mountains. Dolphins frequently escort the vessel while the city\'s white skyline glows gold — one of Oman\'s most unforgettable moments.',
-        image: '/destinations/muscatImg/Muscat6.jpg',
+        image: '/destinations/muscatImg/Muscat6.jpeg',
       },
     ],
     gallery: [
@@ -145,7 +145,7 @@ const destinations: Record<string, DestinationData> = {
       {
         title: 'Al Hamra & Misfat Village Walk',
         description: 'Explore the abandoned multi-storey mud-brick architecture of Al Hamra — frozen in time for over four centuries — before continuing to Misfat Al Abriyeen, a living village where cool falaj irrigation channels flow through terraced gardens of bananas, figs, and pomegranates.',
-        image: '/destinations/nizwaImg/nizwa6.jpg',
+        image: '/destinations/nizwaImg/nizwa6.jpeg',
       },
     ],
     gallery: [
@@ -187,7 +187,7 @@ const destinations: Record<string, DestinationData> = {
       {
         title: 'Al Mughsail Beach & Blowholes',
         description: 'A dramatic stretch of undeveloped coastline where limestone arches and sea caves punctuate a long white beach. Walk the headland path above the blowholes and feel the earth shudder as waves drive columns of spray skyward — one of Oman\'s most visceral natural spectacles.',
-        image: '/destinations/salalahImg/Salalah5.jpg',
+        image: '/destinations/salalahImg/Salalah5.jpeg',
       },
     ],
     gallery: [
@@ -261,17 +261,17 @@ const destinations: Record<string, DestinationData> = {
       {
         title: 'Traditional Dhow Yard Visit',
         description: 'Step into a living piece of history at Sur\'s active dhow building yard, where master craftsmen shape vast planks of teak by hand using traditional adzes, caulking mallets, and centuries of inherited knowledge. The vessels they build — some over 30 metres in length — are still commissioned by Gulf navies and collectors worldwide.',
-        image: '/destinations/surImg/sur5.webp',
+        image: '/destinations/surImg/sur5.jpeg',
       },
       {
         title: 'Ras Al Jinz Turtle Nesting Night',
         description: 'In the dark hours before and after midnight, green sea turtles weighing up to 200kg haul themselves from the sea to excavate nests in the sand. Guided by reserve rangers in total darkness, you stand metres away from a creature that has made this journey for 100 million years — a privilege beyond words.',
-        image: '/destinations/surImg/sur6.jpg',
+        image: '/destinations/surImg/sur6.jpeg',
       },
       {
         title: 'Sur Lagoon & Blue Lagoon Kayak',
         description: 'Paddle across the glassy surface of Sur\'s tidal lagoon at dawn, where flamingos wade in the shallows and traditional wooden boats lie at anchor. Continue by road to the Blue Lagoon — a hidden inlet of extraordinarily clear turquoise water where the sea floor is visible at ten metres depth.',
-        image: '/destinations/surImg/sur7.jpg',
+        image: '/destinations/surImg/sur7.jpeg',
       },
     ],
     gallery: [

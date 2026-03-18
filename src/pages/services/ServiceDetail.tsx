@@ -20,7 +20,7 @@ const serviceData: Record<string, ServiceData> = {
   'trekking-tour': {
     title: 'Trekking Tour',
     subtitle: '1-9 Day Mountain Adventures',
-    hero: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=1920&q=80',
+    hero: 'experiencesImg/trekkingExp/trekkExp3.jpeg',
     description: 'Discover Oman\'s stunning landscapes on guided treks from 1 to 9 days. Hike through dramatic mountains, hidden wadis, and ancient villages. With expert local guides, each journey blends adventure, culture, and natural beauty for an unforgettable experience.',
     features: [
       'Professional mountain guides',
@@ -39,7 +39,7 @@ const serviceData: Record<string, ServiceData> = {
     groupSize: '4-12 People',
     includes: ['Expert guides', 'Camping gear', 'All meals', '4x4 transfers', 'Permits'],
     gallery: [
-      'https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80',
+      'experiencesImg/trekkingExp/trekkExp3.jpeg',
       'experiencesImg/trekkingExp/trekkExp1.jpeg',
       'experiencesImg/trekkingExp/trekkExp2.jpeg'
     ]
@@ -47,7 +47,7 @@ const serviceData: Record<string, ServiceData> = {
   'canyoning-caving': {
     title: 'Canyoning & Caving',
     subtitle: 'Extreme Adventure Exploration',
-    hero: '/experiencesImg/canyonningExp/cannyoning1.jpg',
+    hero: '/experiencesImg/canyonningExp/cannyoning1.jpeg',
     description: 'Dive into adventure with a thrilling 1-day canyoning and caving experience. Explore hidden caves, rappel down waterfalls, and navigate through narrow gorges. Perfect for adrenaline seekers, this guided tour showcases Oman\'s wild side in a safe and unforgettable way.',
     features: [
       'Professional safety equipment',
@@ -66,9 +66,9 @@ const serviceData: Record<string, ServiceData> = {
     groupSize: '4-8 People',
     includes: ['Safety equipment', 'Expert guides', 'Lunch & water', 'Transportation', 'Insurance'],
     gallery: [
-      'experiencesImg/canyonningExp/canyonning4.jpeg',
-      'experiencesImg/canyonningExp/canyonning3.jpeg',
-      '/experiencesImg/canyonningExp/cannyoning1.jpg'
+      'experiencesImg/canyonningExp/cannyoning1.jpeg',
+      'experiencesImg/canyonningExp/cannyoning3.jpeg',
+      '/experiencesImg/canyonningExp/cannyoning5.jpg'
     ]
   },
   'culture-tour': {
