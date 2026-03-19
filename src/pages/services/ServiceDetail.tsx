@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
+import SEO from '../../components/SEO/SEO';
+import JsonLd from '../../components/SEO/JsonLd';
+import { SERVICE_SEO } from '../../utils/seo/seoData';
 
 interface ServiceData {
   title: string;
@@ -206,6 +209,7 @@ const EyebrowLabel: React.FC<{ children: React.ReactNode; light?: boolean }> = (
 const ServiceDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = slug ? serviceData[slug] : null;
+  const seo = slug ? SERVICE_SEO[slug] : null;
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
@@ -217,7 +221,7 @@ const ServiceDetail: React.FC = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  if (!service) {
+  if (!service || !seo) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-primary-dark">
         <div className="text-center px-6">
@@ -238,6 +242,23 @@ const ServiceDetail: React.FC = () => {
 
   return (
     <div className="bg-white overflow-x-hidden">
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        ogType={seo.ogType}
+      />
+      <JsonLd
+        type="service"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://almahaholidays.com/' },
+          { name: 'Services', url: 'https://almahaholidays.com/#/services' },
+          { name: service.title, url: `https://almahaholidays.com/#/services/${slug}` }
+        ]}
+        serviceName={service.title}
+        serviceDescription={service.description}
+      />
 
       {/* ── Reading Progress Bar ── */}
       <div

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO/SEO';
+import { PAGE_SEO } from '../utils/seo/seoData';
 
 const services = [
   {
@@ -71,8 +73,17 @@ const Services: React.FC = () => {
   const activeImage =
     hoveredIndex !== null ? services[hoveredIndex].image : services[0].image;
 
+  const seo = PAGE_SEO.services;
+
   return (
     <div className="bg-white min-h-screen">
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        ogType={seo.ogType}
+      />
 
       {/* ── Hero ── */}
       <section className="relative min-h-[65vh] bg-[#080808] flex items-end overflow-hidden">

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import SEO from '../components/SEO/SEO';
+import { PAGE_SEO } from '../utils/seo/seoData';
 
 /* ─────────────────────────────────────────────
    Shared primitives
@@ -753,16 +755,27 @@ const CTA: React.FC = () => {
 /* ─────────────────────────────────────────────
    Page root
 ───────────────────────────────────────────── */
-const About: React.FC = () => (
-  <div>
-    <Hero />
-    <StatsStrip />
-    <OurStory />
-    <MissionVision />
-    <WhyChooseUs />
-    <MeetTheTeam />
-    <CTA />
-  </div>
-);
+const About: React.FC = () => {
+  const seo = PAGE_SEO.about;
+
+  return (
+    <div>
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        ogType={seo.ogType}
+      />
+      <Hero />
+      <StatsStrip />
+      <OurStory />
+      <MissionVision />
+      <WhyChooseUs />
+      <MeetTheTeam />
+      <CTA />
+    </div>
+  );
+};
 
 export default About;

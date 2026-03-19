@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import SEO from '../components/SEO/SEO';
+import { PAGE_SEO } from '../utils/seo/seoData';
 
 /* ─────────────────────────────────────────────
    Constants
@@ -129,7 +131,7 @@ const TravellersSelect: React.FC<{ value: string; onChange: (v: string) => void 
       </button>
 
       {/* Dropdown */}
-      <div className={`absolute z-50 top-full left-0 right-0 mt-2 bg-white border border-neutral-100 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] overflow-hidden transition-all duration-200 origin-top ${open ? 'opacity-100 scale-y-100 pointer-events-auto' : 'opacity-0 scale-y-95 pointer-events-none'}`}>
+      <div className={`absolute z-[9999] top-full left-0 right-0 mt-2 bg-white border border-neutral-100 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] overflow-hidden transition-all duration-200 origin-top ${open ? 'opacity-100 scale-y-100 pointer-events-auto' : 'opacity-0 scale-y-95 pointer-events-none'}`}>
         {travellersOptions.map((opt, i) => {
           const isSelected = value === opt.value;
           return (
@@ -272,7 +274,7 @@ const DateRangePicker: React.FC<{ value: DateRange; onChange: (v: DateRange) => 
       </button>
 
       {/* Calendar panel */}
-      <div className={`absolute z-50 top-full left-0 mt-2 bg-white border border-neutral-100 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] transition-all duration-200 origin-top w-full max-w-[360px] ${open ? 'opacity-100 scale-y-100 pointer-events-auto' : 'opacity-0 scale-y-95 pointer-events-none'}`}>
+      <div className={`absolute z-[9999] top-full left-0 mt-2 bg-white border border-neutral-100 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] transition-all duration-200 origin-top min-w-[320px] max-w-[360px] ${open ? 'opacity-100 scale-y-100 pointer-events-auto' : 'opacity-0 scale-y-95 pointer-events-none'}`}>
         <div className="p-5">
 
           {/* Month navigation */}
@@ -389,7 +391,7 @@ const Opener: React.FC = () => (
   <section className="relative min-h-screen flex flex-col lg:flex-row overflow-hidden">
 
     {/* ── LEFT: dark panel ── */}
-    <div className="relative flex-1 bg-primary-dark flex flex-col justify-center pt-32 pb-16 px-10 md:px-16 lg:px-20 overflow-hidden overflow-x-clip">
+    <div className="relative flex-1 bg-primary-dark flex flex-col justify-center pt-32 pb-16 px-10 md:px-16 lg:px-20 overflow-hidden">
 
       {/* Decorative ghost text */}
       <span className="absolute -bottom-6 -left-4 font-display text-[12rem] font-black text-white/[0.025] select-none leading-none pointer-events-none">
@@ -400,7 +402,7 @@ const Opener: React.FC = () => (
       <div className="flex items-center gap-4 mb-8 animate-slide-up opacity-0">
         <div className="w-8 h-px bg-[#e3261d]/60" />
         <span className="text-[10px] font-bold tracking-[0.45em] text-[#e3261d] uppercase">
-          Contact Al Maha Tourism
+          Contact Al Maha Holidays
         </span>
       </div>
 
@@ -585,7 +587,7 @@ This enquiry was submitted via the Al Maha Tourism contact form.
   return (
     <div
       ref={ref as React.RefObject<HTMLDivElement>}
-      className={`flex-1 bg-white px-8 md:px-14 lg:px-16 py-20 transition-all duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] overflow-x-hidden ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+      className={`flex-1 bg-white px-8 md:px-14 lg:px-16 py-20 transition-all duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] relative z-10 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
     >
       {/* Form header */}
       <div className="flex items-center gap-5 mb-10">
@@ -753,7 +755,7 @@ const ContactSidebar: React.FC = () => {
   return (
     <div
       ref={ref as React.RefObject<HTMLDivElement>}
-      className={`w-full lg:w-[380px] xl:w-[420px] flex-shrink-0 bg-[#F7F5F2] flex flex-col transition-all duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] delay-200 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+      className={`w-full lg:w-[380px] xl:w-[420px] flex-shrink-0 bg-[#F7F5F2] flex flex-col transition-all duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] delay-200 relative z-10 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
     >
       <div className="px-10 py-20 flex flex-col gap-12 flex-1">
 
@@ -858,7 +860,7 @@ const TrustBar: React.FC = () => {
   return (
     <section
       ref={ref as React.RefObject<HTMLElement>}
-      className={`bg-[#111111] transition-all duration-700 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+      className={`bg-[#111111] transition-all duration-700 ease-out relative z-0 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
     >
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/8">
@@ -887,18 +889,29 @@ const TrustBar: React.FC = () => {
 /* ─────────────────────────────────────────────
    Page root
 ───────────────────────────────────────────── */
-const Contact: React.FC = () => (
-  <div className="overflow-x-hidden">
-    <Opener />
+const Contact: React.FC = () => {
+  const seo = PAGE_SEO.contact;
 
-    {/* Form + Sidebar — side by side */}
-    <div className="flex flex-col lg:flex-row">
-      <ContactForm />
-      <ContactSidebar />
+  return (
+    <div className="overflow-x-clip">
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        ogType={seo.ogType}
+      />
+      <Opener />
+
+      {/* Form + Sidebar — side by side */}
+      <div className="flex flex-col lg:flex-row relative z-10">
+        <ContactForm />
+        <ContactSidebar />
+      </div>
+
+      <TrustBar />
     </div>
-
-    <TrustBar />
-  </div>
-);
+  );
+};
 
 export default Contact;

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import SEO from '../components/SEO/SEO';
+import { PAGE_SEO } from '../utils/seo/seoData';
 
 /* ─────────────────────────────────────────────
    Data
@@ -557,13 +559,24 @@ const CTABanner: React.FC = () => {
 /* ─────────────────────────────────────────────
    Page root
 ───────────────────────────────────────────── */
-const Destinations: React.FC = () => (
-  <div>
-    <Hero />
-    <GridSection />
-    {/* <PlannerStrip /> */}
-    <CTABanner />
-  </div>
-);
+const Destinations: React.FC = () => {
+  const seo = PAGE_SEO.destinations;
+
+  return (
+    <div>
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        ogType={seo.ogType}
+      />
+      <Hero />
+      <GridSection />
+      {/* <PlannerStrip /> */}
+      <CTABanner />
+    </div>
+  );
+};
 
 export default Destinations;

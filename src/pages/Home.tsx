@@ -1,4 +1,6 @@
 import React from 'react';
+import SEO from '../components/SEO/SEO';
+import { PAGE_SEO } from '../utils/seo/seoData';
 import HeroSection from '../components/home/HeroSection';
 import AboutSection from '../components/home/AboutSection';
 import EventsTypeSection from '../components/home/EventsTypeSection';
@@ -11,8 +13,17 @@ import ReviewsSection from '../components/home/ReviewsSection';
 // import ContactUsSection from '../components/home/ContactUsSection';
 
 const Home: React.FC = () => {
+  const seo = PAGE_SEO.home;
+
   return (
     <>
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        ogType={seo.ogType}
+      />
       <HeroSection />
       <AboutSection />
       <ServicesSection />

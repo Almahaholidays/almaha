@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import SEO from '../components/SEO/SEO';
+import { PAGE_SEO } from '../utils/seo/seoData';
 
 /* ─────────────────────────── DATA ─────────────────────────── */
 
@@ -613,8 +615,17 @@ const Experiences: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const seo = PAGE_SEO.experiences;
+
   return (
     <div>
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        ogType={seo.ogType}
+      />
       <Hero />
       <StatsStrip />
       <TypeNav />

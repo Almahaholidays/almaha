@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
+import SEO from '../../components/SEO/SEO';
+import JsonLd from '../../components/SEO/JsonLd';
+import { DESTINATION_SEO } from '../../utils/seo/seoData';
 
 /* ─────────────────────────────────────────────
    Types
@@ -758,8 +761,9 @@ const CTASection: React.FC<{ dest: DestinationData }> = ({ dest }) => {
 const DestinationDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const dest = slug ? destinations[slug] : null;
+  const seo = slug ? DESTINATION_SEO[slug] : null;
 
-  if (!dest) {
+  if (!dest || !seo) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-primary-dark">
         <div className="text-center px-6">
@@ -773,6 +777,23 @@ const DestinationDetail: React.FC = () => {
 
   return (
     <div className="bg-white">
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        ogType={seo.ogType}
+      />
+      <JsonLd
+        type="destination"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://almahaholidays.com/' },
+          { name: 'Destinations', url: 'https://almahaholidays.com/#/destinations' },
+          { name: dest.title, url: `https://almahaholidays.com/#/destinations/${slug}` }
+        ]}
+        destinationName={dest.title}
+        destinationDescription={dest.about}
+      />
       <HeroSection dest={dest} />
       <AboutSection dest={dest} />
       <ExperiencesSection dest={dest} />

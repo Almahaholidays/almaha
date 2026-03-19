@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import SEO from '../components/SEO/SEO';
+import { PAGE_SEO } from '../utils/seo/seoData';
 
 /* ─────────────────────────── DATA ─────────────────────────── */
 
@@ -307,8 +309,17 @@ const Gallery: React.FC = () => {
     };
   }, [lightboxIndex, filteredPhotos.length]);
 
+  const seo = PAGE_SEO.gallery;
+
   return (
     <div className="bg-white">
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        ogType={seo.ogType}
+      />
       <Hero />
 
       {/* ── Interactive Filter Bar with Morphing Pill ── */}
